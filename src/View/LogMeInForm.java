@@ -139,11 +139,10 @@ public class LogMeInForm extends javax.swing.JFrame {
     }//GEN-LAST:event_LogInCancelButtonActionPerformed
 
     private void LogInConfrimButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInConfrimButtonMouseClicked
-         LogMeInForm MyLogin = new LogMeInForm();
          File file = new File("LoginDetails.txt");
          boolean found = false;
-         String username = MyLogin.UsernameLogInText.getText();
-         String password = new String(MyLogin.PasswordLogInText.getPassword());
+         String username = this.UsernameLogInText.getText();
+         String password = new String(this.PasswordLogInText.getPassword());
          String tempUsername;
          String tempPassword;
          String Line;
@@ -151,16 +150,18 @@ public class LogMeInForm extends javax.swing.JFrame {
             Scanner scFile = new Scanner(file);
              while (scFile.hasNext()) {        
                  Line = scFile.nextLine();
-                 Scanner inLine = new Scanner(Line).useDelimiter("#");
+                 Scanner inLine = new Scanner(Line).useDelimiter(",");
+
                  tempUsername = inLine.next();
                  tempPassword = inLine.next();
                  
                  if (username.compareTo(tempUsername) == 0 && password.compareTo(tempPassword) == 0) {
-                   found = true;
-                   JOptionPane.showMessageDialog(rootPane, "Match found!");
+                     found = true;
+                 }
+                   /* JOptionPane.showMessageDialog(rootPane, "Match found!");
                  } else{
                      JOptionPane.showMessageDialog(rootPane, "No match found!");
-                 }
+                 } */
                  }
                  if (found) {
                      JOptionPane.showMessageDialog(rootPane, "You have succesfully logged in!");
