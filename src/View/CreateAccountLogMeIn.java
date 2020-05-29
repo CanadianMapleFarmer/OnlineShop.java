@@ -113,27 +113,33 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         String UserName = AccCreateUsername.getText();
         String Password = new String(AccCreatePassword.getPassword());
         String PassConfirm = new String(AccCreatePassConfirm.getPassword());
+        boolean found = false;
         try {
             if (Password.compareTo(PassConfirm) == 0) {
                 try (FileWriter fw = new FileWriter("LoginDetails.txt" ,true)) {
-                    fw.write(UserName + "#" + Password + "#");
+                    fw.write(UserName + "#" + Password);
                     fw.write("\n");
+                    found = true;
+                    
                 }
-                JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
-                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Passwords do not match!");
             }
+            
+            if (found) {
+                JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
+                Acc.setVisible(false);
+                JOptionPane.showMessageDialog(rootPane, "Please login again.");
+                LogMeInForm login = new LogMeInForm();
+                login.setVisible(true);
+                login.setLocationRelativeTo(null);
+                this.dispose();
+                }
             
             
         } catch (IOException ex) {
             Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
         }
-      Acc.setVisible(false);
-      JOptionPane.showMessageDialog(rootPane, "Please login again.");
-      LogMeInForm login = new LogMeInForm();
-      login.setVisible(true);
-      login.setLocationRelativeTo(null);
       
     }//GEN-LAST:event_AccCreateButtonMouseClicked
 

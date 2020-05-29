@@ -5,6 +5,7 @@ package View;
 import Controller.Shopping;
 import java.util.HashSet;
 import javax.swing.ImageIcon;
+import Model.Products;
 
 /**
  *
@@ -12,9 +13,8 @@ import javax.swing.ImageIcon;
  */
 public class MainScreen extends javax.swing.JFrame{
 
-    /**
-     * Creates new form MainScreen
-     */
+    Shopping MyShop = new Shopping();
+    
     public MainScreen() {
         initComponents();
     }
@@ -42,7 +42,7 @@ public class MainScreen extends javax.swing.JFrame{
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        InternalProdactText = new javax.swing.JTextField();
+        InternalProductText = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -160,9 +160,9 @@ public class MainScreen extends javax.swing.JFrame{
 
         jInternalFrame1.setVisible(true);
 
-        InternalProdactText.addActionListener(new java.awt.event.ActionListener() {
+        InternalProductText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InternalProdactTextActionPerformed(evt);
+                InternalProductTextActionPerformed(evt);
             }
         });
 
@@ -172,15 +172,15 @@ public class MainScreen extends javax.swing.JFrame{
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalProdactText, javax.swing.GroupLayout.PREFERRED_SIZE, 954, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addComponent(InternalProductText, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalProdactText, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addComponent(InternalProductText, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -225,19 +225,25 @@ public class MainScreen extends javax.swing.JFrame{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void ProductButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton1MouseClicked
-        
-        
+
+                System.out.println("Mouse clicked");
+                
+                Products p = this.MyShop.ShoppingProducts()[0];
+                String txt = "ProductID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name:" + p.getProductName() + System.lineSeparator() + "\n" + "Product price: " + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                this.InternalProductText.setText(txt);   
+                
     }//GEN-LAST:event_ProductButton1MouseClicked
 
     private void ProductButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProductButton1ActionPerformed
 
-    private void InternalProdactTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InternalProdactTextActionPerformed
+    private void InternalProductTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InternalProductTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_InternalProdactTextActionPerformed
+    }//GEN-LAST:event_InternalProductTextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,7 +286,7 @@ public class MainScreen extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane DgitalItemsTab;
-    private javax.swing.JTextField InternalProdactText;
+    private javax.swing.JTextField InternalProductText;
     private javax.swing.JButton ProductButton1;
     private javax.swing.JPanel ProductPanel1;
     private javax.swing.JPanel ProductPanel2;

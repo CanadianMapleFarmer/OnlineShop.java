@@ -15,7 +15,7 @@ public class Shopping {
     
     int counter = 0;
     Products[] ProductArr = new Products[4];
-    public String ShoppingProducts() {
+    public Products[] ShoppingProducts() {
         try {
             File scFile = new File("Product list.txt");
             String ProductID;
@@ -41,7 +41,7 @@ public class Shopping {
         } catch (FileNotFoundException e) {
             System.out.println("File not found!!!");
         }
-        return null;
+        return ProductArr;
         
     }  
 

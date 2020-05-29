@@ -12,7 +12,7 @@ package Model;
     String ProductDescription;
     int DeliveryDistance;
     int Nothing = 0;
-    Products MyProducts = new Products(ProductName, ProductsPrice, ProductsPrice, ProductDescription);
+    Products MyProducts = new Products(ProductID,ProductName, ProductsPrice, ProductDescription);
 
     
     
