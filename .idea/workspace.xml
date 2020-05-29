@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="91bad780-60c5-43af-b110-a3946f1a399c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/LoginDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LoginDetails.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Controller/Shopping.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Controller/Shopping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Model/Delivery.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Model/Delivery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Model/LogMeIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Model/LogMeIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Model/Products.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Model/Products.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Model/guitest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Model/guitest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CheckoutScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CheckoutScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CheckoutScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CheckoutScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CheckoutScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CheckoutScreen$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CheckoutScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CheckoutScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CreateAccountLogMeIn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CreateAccountLogMeIn$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CreateAccountLogMeIn$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CreateAccountLogMeIn$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/CreateAccountLogMeIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/CreateAccountLogMeIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/LogMeInForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/LogMeInForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/MainScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/MainScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/MainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/MainScreen$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/MainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/MainScreen$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/MainScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/ProductViewScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/ProductViewScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/View/ProductViewScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/View/ProductViewScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/CreateAccountLogMeIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/CreateAccountLogMeIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/LogMeInForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LogMeInForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/LogMeInForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LogMeInForm.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ca97V1OCX7SxqxlV0Y1oSlBcMJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.LogMeInForm">
+    <configuration name="LogMeIn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Model.LogMeIn" />
+      <module name="OnlineShop.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogMeInForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="View.LogMeInForm" />
+      <module name="OnlineShop.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="guitest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Model.guitest" />
+      <module name="OnlineShop.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LogMeInForm" />
+        <item itemvalue="Application.LogMeIn" />
+        <item itemvalue="Application.guitest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91bad780-60c5-43af-b110-a3946f1a399c" name="Default Changelist" comment="" />
+      <created>1590755669494</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590755669494</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1487" height="200" key="GridCell.Tab.0.bottom" timestamp="1590757313751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1487" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1590756735233" />
+    <state width="1487" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590757313751" />
+    <state width="1487" height="200" key="GridCell.Tab.0.center" timestamp="1590757313751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1487" height="200" key="GridCell.Tab.0.center/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1590756735233" />
+    <state width="1487" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590757313751" />
+    <state width="1487" height="200" key="GridCell.Tab.0.left" timestamp="1590757313751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1487" height="200" key="GridCell.Tab.0.left/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1590756735233" />
+    <state width="1487" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590757313751" />
+    <state width="1487" height="200" key="GridCell.Tab.0.right" timestamp="1590757313751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1487" height="200" key="GridCell.Tab.0.right/0.0.1536.824/460.1080.1000.504@0.0.1536.824" timestamp="1590756735233" />
+    <state width="1487" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590757313751" />
+  </component>
+</project>
