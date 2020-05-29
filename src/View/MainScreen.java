@@ -6,7 +6,10 @@ import Controller.Shopping;
 import java.util.HashSet;
 import javax.swing.ImageIcon;
 import Model.Products;
+import Model.Books;
+import Model.DigitalItems;
 import java.awt.Font;
+import java.util.ArrayList;
 import javax.swing.JTextField;
 
 /**
@@ -41,9 +44,37 @@ public class MainScreen extends javax.swing.JFrame{
         jLabel3 = new javax.swing.JLabel();
         ProductButton2 = new javax.swing.JButton();
         ProductPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        ProductButton3 = new javax.swing.JButton();
         ProductPanel4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        ProductButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        BookPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        BookButton1 = new javax.swing.JButton();
+        BookPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        BookButton2 = new javax.swing.JButton();
+        BookPanel3 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        BookButton3 = new javax.swing.JButton();
+        BookPanel4 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        BookButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        DigitalItemPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        DigitalItemButton1 = new javax.swing.JButton();
+        DigitalItemPanel2 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        DigitalItemButton2 = new javax.swing.JButton();
+        DigitalItemPanel3 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        DigitalItemButton3 = new javax.swing.JButton();
+        DigitalItemPanel4 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        DigitalItemButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         InternalScrollPane = new javax.swing.JScrollPane();
@@ -108,7 +139,31 @@ public class MainScreen extends javax.swing.JFrame{
 
         ProductPanel3.setLayout(null);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Hanger.png"))); // NOI18N
+        ProductPanel3.add(jLabel4);
+        jLabel4.setBounds(70, 50, 113, 100);
+
+        ProductButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProductButton3MouseClicked(evt);
+            }
+        });
+        ProductPanel3.add(ProductButton3);
+        ProductButton3.setBounds(0, 0, 240, 210);
+
         ProductPanel4.setLayout(null);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\Shoes.png")); // NOI18N
+        ProductPanel4.add(jLabel5);
+        jLabel5.setBounds(60, 40, 120, 120);
+
+        ProductButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProductButton4MouseClicked(evt);
+            }
+        });
+        ProductPanel4.add(ProductButton4);
+        ProductButton4.setBounds(0, 0, 240, 210);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -141,30 +196,175 @@ public class MainScreen extends javax.swing.JFrame{
 
         jPanel2.setBackground(new java.awt.Color(51, 255, 204));
 
+        BookPanel1.setLayout(null);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\WoomenInTheWindow.jpg")); // NOI18N
+        BookPanel1.add(jLabel6);
+        jLabel6.setBounds(60, 10, 130, 190);
+
+        BookButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BookButton1MouseClicked(evt);
+            }
+        });
+        BookPanel1.add(BookButton1);
+        BookButton1.setBounds(0, 0, 240, 220);
+
+        BookPanel2.setLayout(null);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\BehindBlueEyes.jpg")); // NOI18N
+        BookPanel2.add(jLabel7);
+        jLabel7.setBounds(50, 10, 140, 190);
+
+        BookButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BookButton2MouseClicked(evt);
+            }
+        });
+        BookPanel2.add(BookButton2);
+        BookButton2.setBounds(0, 0, 240, 220);
+
+        BookPanel3.setLayout(null);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\Spud.jpg")); // NOI18N
+        BookPanel3.add(jLabel8);
+        jLabel8.setBounds(60, 10, 130, 190);
+
+        BookButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BookButton3MouseClicked(evt);
+            }
+        });
+        BookPanel3.add(BookButton3);
+        BookButton3.setBounds(0, 0, 240, 220);
+
+        BookPanel4.setLayout(null);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\diary-of-a-wimpy-kid.jpg")); // NOI18N
+        BookPanel4.add(jLabel9);
+        jLabel9.setBounds(60, 10, 130, 190);
+
+        BookButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BookButton4MouseClicked(evt);
+            }
+        });
+        BookPanel4.add(BookButton4);
+        BookButton4.setBounds(0, 0, 240, 220);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1077, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(BookPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BookPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BookPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BookPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 234, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BookPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BookPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BookPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BookPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         DgitalItemsTab.addTab("Books", jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
 
+        DigitalItemPanel1.setLayout(null);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\ButterflyKnifeSlaugter.png")); // NOI18N
+        DigitalItemPanel1.add(jLabel10);
+        jLabel10.setBounds(20, 20, 200, 150);
+
+        DigitalItemButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DigitalItemButton1MouseClicked(evt);
+            }
+        });
+        DigitalItemPanel1.add(DigitalItemButton1);
+        DigitalItemButton1.setBounds(0, 0, 240, 210);
+
+        DigitalItemPanel2.setLayout(null);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\AK47uAlienred.png")); // NOI18N
+        DigitalItemPanel2.add(jLabel11);
+        jLabel11.setBounds(40, 20, 160, 150);
+
+        DigitalItemButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DigitalItemButton2MouseClicked(evt);
+            }
+        });
+        DigitalItemPanel2.add(DigitalItemButton2);
+        DigitalItemButton2.setBounds(0, 0, 240, 210);
+
+        DigitalItemPanel3.setLayout(null);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\KarambitFade.png")); // NOI18N
+        DigitalItemPanel3.add(jLabel12);
+        jLabel12.setBounds(50, 40, 150, 120);
+
+        DigitalItemButton3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                DigitalItemButton3MouseDragged(evt);
+            }
+        });
+        DigitalItemPanel3.add(DigitalItemButton3);
+        DigitalItemButton3.setBounds(0, 0, 240, 210);
+
+        DigitalItemPanel4.setLayout(null);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\TemperedMetalFacemask.png")); // NOI18N
+        DigitalItemPanel4.add(jLabel13);
+        jLabel13.setBounds(50, 40, 140, 120);
+
+        DigitalItemButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DigitalItemButton4MouseClicked(evt);
+            }
+        });
+        DigitalItemPanel4.add(DigitalItemButton4);
+        DigitalItemButton4.setBounds(0, 0, 240, 210);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1077, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(DigitalItemPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(DigitalItemPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(DigitalItemPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(DigitalItemPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 234, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(DigitalItemPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(DigitalItemPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DigitalItemPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                        .addComponent(DigitalItemPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         DgitalItemsTab.addTab("Digital items", jPanel3);
@@ -243,14 +443,12 @@ public class MainScreen extends javax.swing.JFrame{
     
     private void ProductButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton1MouseClicked
                 int productNum = 0;
-                this.InternalProductText.selectAll();
-                this.InternalProductText.replaceSelection("");
                 Font font = new Font("Arial", Font.BOLD, 20);
-                Products p = this.MyShop.ShoppingProducts()[productNum];
-                String txt = "ProductID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name:" + p.getProductName() + System.lineSeparator() + "\n" + "Product price: " + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                Products p = this.MyShop.ShoppingProducts().get(productNum);
+                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.append(txt);
+                this.InternalProductText.setText(txt);
                 
                 
     }//GEN-LAST:event_ProductButton1MouseClicked
@@ -261,16 +459,114 @@ public class MainScreen extends javax.swing.JFrame{
 
     private void ProductButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton2MouseClicked
                 int productNum = 1;
-                this.InternalProductText.selectAll();
-                this.InternalProductText.replaceSelection("");
                 Font font = new Font("Arial", Font.BOLD, 20);
-                Products p = this.MyShop.ShoppingProducts()[productNum];
-                String txt = "ProductID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name:" + p.getProductName() + System.lineSeparator() + "\n" + "Product price: " + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                Products p = this.MyShop.ShoppingProducts().get(productNum);
+                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.append(txt);
+                this.InternalProductText.setText(txt);
                 
     }//GEN-LAST:event_ProductButton2MouseClicked
+
+    private void ProductButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton3MouseClicked
+                int productNum = 2;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Products p = this.MyShop.ShoppingProducts().get(productNum);
+                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_ProductButton3MouseClicked
+
+    private void ProductButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton4MouseClicked
+                int productNum = 3;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Products p = this.MyShop.ShoppingProducts().get(productNum);
+                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_ProductButton4MouseClicked
+
+    private void BookButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton1MouseClicked
+           int bookNum = 0;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Books p = this.MyShop.ShoppingBooks().get(bookNum);
+                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_BookButton1MouseClicked
+
+    private void BookButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton2MouseClicked
+        int bookNum = 1;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Books p = this.MyShop.ShoppingBooks().get(bookNum);
+                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_BookButton2MouseClicked
+
+    private void BookButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton3MouseClicked
+        int bookNum = 2;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Books p = this.MyShop.ShoppingBooks().get(bookNum);
+                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_BookButton3MouseClicked
+
+    private void BookButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton4MouseClicked
+        int bookNum = 3;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Books p = this.MyShop.ShoppingBooks().get(bookNum);
+                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_BookButton4MouseClicked
+
+    private void DigitalItemButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton1MouseClicked
+        int digitalitemNum = 0;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_DigitalItemButton1MouseClicked
+
+    private void DigitalItemButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton2MouseClicked
+        int digitalitemNum = 1;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_DigitalItemButton2MouseClicked
+
+    private void DigitalItemButton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton3MouseDragged
+        int digitalitemNum = 2;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_DigitalItemButton3MouseDragged
+
+    private void DigitalItemButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton4MouseClicked
+        int digitalitemNum = 3;
+                Font font = new Font("Arial", Font.BOLD, 20);
+                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.setText(txt);
+    }//GEN-LAST:event_DigitalItemButton4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -312,19 +608,47 @@ public class MainScreen extends javax.swing.JFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BookButton1;
+    private javax.swing.JButton BookButton2;
+    private javax.swing.JButton BookButton3;
+    private javax.swing.JButton BookButton4;
+    private javax.swing.JPanel BookPanel1;
+    private javax.swing.JPanel BookPanel2;
+    private javax.swing.JPanel BookPanel3;
+    private javax.swing.JPanel BookPanel4;
     private javax.swing.JTabbedPane DgitalItemsTab;
+    private javax.swing.JButton DigitalItemButton1;
+    private javax.swing.JButton DigitalItemButton2;
+    private javax.swing.JButton DigitalItemButton3;
+    private javax.swing.JButton DigitalItemButton4;
+    private javax.swing.JPanel DigitalItemPanel1;
+    private javax.swing.JPanel DigitalItemPanel2;
+    private javax.swing.JPanel DigitalItemPanel3;
+    private javax.swing.JPanel DigitalItemPanel4;
     private javax.swing.JTextArea InternalProductText;
     private javax.swing.JScrollPane InternalScrollPane;
     private javax.swing.JButton ProductButton1;
     private javax.swing.JButton ProductButton2;
+    private javax.swing.JButton ProductButton3;
+    private javax.swing.JButton ProductButton4;
     private javax.swing.JPanel ProductPanel1;
     private javax.swing.JPanel ProductPanel2;
     private javax.swing.JPanel ProductPanel3;
     private javax.swing.JPanel ProductPanel4;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

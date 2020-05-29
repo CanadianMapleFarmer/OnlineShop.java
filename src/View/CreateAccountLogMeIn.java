@@ -117,8 +117,7 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         try {
             if (Password.compareTo(PassConfirm) == 0) {
                 try (FileWriter fw = new FileWriter("LoginDetails.txt" ,true)) {
-                    fw.write(UserName + "#" + Password);
-                    fw.write("\n");
+                    fw.write(UserName + "#" + Password + "\n");                  
                     found = true;
                     
                 }
