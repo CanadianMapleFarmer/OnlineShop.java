@@ -6,6 +6,8 @@ import Controller.Shopping;
 import java.util.HashSet;
 import javax.swing.ImageIcon;
 import Model.Products;
+import java.awt.Font;
+import javax.swing.JTextField;
 
 /**
  *
@@ -36,13 +38,16 @@ public class MainScreen extends javax.swing.JFrame{
         jLabel2 = new javax.swing.JLabel();
         ProductButton1 = new javax.swing.JButton();
         ProductPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        ProductButton2 = new javax.swing.JButton();
         ProductPanel3 = new javax.swing.JPanel();
         ProductPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        InternalProductText = new javax.swing.JTextField();
+        InternalScrollPane = new javax.swing.JScrollPane();
+        InternalProductText = new javax.swing.JTextArea();
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -70,10 +75,9 @@ public class MainScreen extends javax.swing.JFrame{
         ProductPanel1.setBackground(new java.awt.Color(255, 255, 255));
         ProductPanel1.setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/OOF.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Shovel.png"))); // NOI18N
         ProductPanel1.add(jLabel2);
-        jLabel2.setBounds(60, 40, 120, 120);
+        jLabel2.setBounds(70, 50, 110, 113);
 
         ProductButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -89,6 +93,18 @@ public class MainScreen extends javax.swing.JFrame{
         ProductButton1.setBounds(0, 0, 240, 210);
 
         ProductPanel2.setLayout(null);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Toilet.png"))); // NOI18N
+        ProductPanel2.add(jLabel3);
+        jLabel3.setBounds(70, 50, 113, 110);
+
+        ProductButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProductButton2MouseClicked(evt);
+            }
+        });
+        ProductPanel2.add(ProductButton2);
+        ProductButton2.setBounds(0, 0, 240, 210);
 
         ProductPanel3.setLayout(null);
 
@@ -117,8 +133,8 @@ public class MainScreen extends javax.swing.JFrame{
                     .addComponent(ProductPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ProductPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ProductPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(ProductPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         DgitalItemsTab.addTab("Products", jPanel1);
@@ -160,11 +176,9 @@ public class MainScreen extends javax.swing.JFrame{
 
         jInternalFrame1.setVisible(true);
 
-        InternalProductText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InternalProductTextActionPerformed(evt);
-            }
-        });
+        InternalProductText.setColumns(20);
+        InternalProductText.setRows(5);
+        InternalScrollPane.setViewportView(InternalProductText);
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
@@ -172,14 +186,14 @@ public class MainScreen extends javax.swing.JFrame{
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalProductText, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
+                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalProductText, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
+                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -228,12 +242,16 @@ public class MainScreen extends javax.swing.JFrame{
     
     
     private void ProductButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton1MouseClicked
-
-                System.out.println("Mouse clicked");
-                
-                Products p = this.MyShop.ShoppingProducts()[0];
+                int productNum = 0;
+                this.InternalProductText.selectAll();
+                this.InternalProductText.replaceSelection("");
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Products p = this.MyShop.ShoppingProducts()[productNum];
                 String txt = "ProductID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name:" + p.getProductName() + System.lineSeparator() + "\n" + "Product price: " + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
-                this.InternalProductText.setText(txt);   
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.append(txt);
+                
                 
     }//GEN-LAST:event_ProductButton1MouseClicked
 
@@ -241,9 +259,18 @@ public class MainScreen extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_ProductButton1ActionPerformed
 
-    private void InternalProductTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InternalProductTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InternalProductTextActionPerformed
+    private void ProductButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton2MouseClicked
+                int productNum = 1;
+                this.InternalProductText.selectAll();
+                this.InternalProductText.replaceSelection("");
+                Font font = new Font("Arial", Font.BOLD, 20);
+                Products p = this.MyShop.ShoppingProducts()[productNum];
+                String txt = "ProductID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name:" + p.getProductName() + System.lineSeparator() + "\n" + "Product price: " + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                this.InternalProductText.setFont(font);
+                this.InternalProductText.setLineWrap(true);
+                this.InternalProductText.append(txt);
+                
+    }//GEN-LAST:event_ProductButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -286,8 +313,10 @@ public class MainScreen extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane DgitalItemsTab;
-    private javax.swing.JTextField InternalProductText;
+    private javax.swing.JTextArea InternalProductText;
+    private javax.swing.JScrollPane InternalScrollPane;
     private javax.swing.JButton ProductButton1;
+    private javax.swing.JButton ProductButton2;
     private javax.swing.JPanel ProductPanel1;
     private javax.swing.JPanel ProductPanel2;
     private javax.swing.JPanel ProductPanel3;
@@ -295,6 +324,7 @@ public class MainScreen extends javax.swing.JFrame{
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

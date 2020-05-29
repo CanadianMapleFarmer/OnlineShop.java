@@ -155,9 +155,9 @@
                               <Component id="ProductPanel4" max="32767" attributes="0"/>
                               <Component id="ProductPanel3" alignment="1" max="32767" attributes="0"/>
                               <Component id="ProductPanel2" alignment="1" max="32767" attributes="0"/>
-                              <Component id="ProductPanel1" alignment="1" pref="212" max="32767" attributes="0"/>
+                              <Component id="ProductPanel1" alignment="1" pref="204" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -177,13 +177,12 @@
                     <Component class="javax.swing.JLabel" name="jLabel2">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/View/OOF.png"/>
+                          <Image iconType="3" name="/View/Shovel.png"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="jLabel2"/>
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="60" y="40" width="120" height="120"/>
+                          <AbsoluteConstraints x="70" y="50" width="110" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -205,6 +204,30 @@
                   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
                     <Property name="useNullLayout" type="boolean" value="true"/>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel3">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/View/Toilet.png"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="70" y="50" width="-1" height="110"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="ProductButton2">
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ProductButton2MouseClicked"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="0" y="0" width="240" height="210"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="ProductPanel3">
 
@@ -300,7 +323,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="InternalProductText" pref="996" max="32767" attributes="0"/>
+                      <Component id="InternalScrollPane" pref="996" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -309,18 +332,28 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="InternalProductText" pref="339" max="32767" attributes="0"/>
+                      <Component id="InternalScrollPane" pref="339" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="InternalProductText">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InternalProductTextActionPerformed"/>
-              </Events>
-            </Component>
+            <Container class="javax.swing.JScrollPane" name="InternalScrollPane">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="InternalProductText">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>
