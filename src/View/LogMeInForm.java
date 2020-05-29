@@ -91,7 +91,7 @@ public class LogMeInForm extends javax.swing.JFrame {
         LogInConfrimButton.setText("Log in");
         LogInConfrimButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LogInConfrimButtonMouseClicked(evt);
+                LogInConfirmButtonMouseClicked(evt);
             }
         });
         jPanel2.add(LogInConfrimButton);
@@ -138,7 +138,7 @@ public class LogMeInForm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_LogInCancelButtonActionPerformed
 
-    private void LogInConfrimButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInConfrimButtonMouseClicked
+    private void LogInConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInConfrimButtonMouseClicked
          File file = new File("LoginDetails.txt");
          boolean found = false;
          String username = this.UsernameLogInText.getText();
@@ -161,7 +161,7 @@ public class LogMeInForm extends javax.swing.JFrame {
                    /* JOptionPane.showMessageDialog(rootPane, "Match found!");
                  } else{
                      JOptionPane.showMessageDialog(rootPane, "No match found!");
-                 } */
+                 } */ // If u uncomment this it will show if it found a match for every account it checks
                  }
                  if (found) {
                      JOptionPane.showMessageDialog(rootPane, "You have succesfully logged in!");
