@@ -79,7 +79,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="437" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="223" max="-2" attributes="0"/>
+                          <Component id="BuyButton" min="-2" pref="223" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="21" max="32767" attributes="0"/>
@@ -96,7 +96,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jInternalFrame1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="BuyButton" min="-2" pref="53" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -501,11 +501,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="DigitalItemPanel4" pref="203" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="DigitalItemPanel3" max="32767" attributes="0"/>
-                                  <Component id="DigitalItemPanel2" pref="203" max="32767" attributes="0"/>
-                                  <Component id="DigitalItemPanel1" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="DigitalItemPanel3" max="32767" attributes="0"/>
+                              <Component id="DigitalItemPanel2" pref="203" max="32767" attributes="0"/>
+                              <Component id="DigitalItemPanel1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                       </Group>
@@ -670,7 +668,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="InternalScrollPane" pref="322" max="32767" attributes="0"/>
+                      <Component id="InternalScrollPane" pref="330" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -694,7 +692,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="BuyButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="0" type="rgb"/>
@@ -708,7 +706,7 @@
             <Property name="text" type="java.lang.String" value="Buy"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuyButtonMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>

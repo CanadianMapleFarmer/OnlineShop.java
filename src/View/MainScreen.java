@@ -10,6 +10,7 @@ import Model.Books;
 import Model.DigitalItems;
 import java.awt.Font;
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JTextField;
 
 /**
@@ -79,7 +80,7 @@ public class MainScreen extends javax.swing.JFrame{
         jInternalFrame1 = new javax.swing.JInternalFrame();
         InternalScrollPane = new javax.swing.JScrollPane();
         InternalProductText = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        BuyButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -116,11 +117,7 @@ public class MainScreen extends javax.swing.JFrame{
                 ProductButton1MouseClicked(evt);
             }
         });
-        ProductButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProductButton1ActionPerformed(evt);
-            }
-        });
+        
         ProductPanel1.add(ProductButton1);
         ProductButton1.setBounds(0, 0, 240, 210);
 
@@ -361,10 +358,9 @@ public class MainScreen extends javax.swing.JFrame{
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(DigitalItemPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(DigitalItemPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DigitalItemPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                        .addComponent(DigitalItemPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(DigitalItemPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DigitalItemPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                    .addComponent(DigitalItemPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -394,17 +390,17 @@ public class MainScreen extends javax.swing.JFrame{
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 255));
-        jButton1.setText("Buy");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        BuyButton.setBackground(new java.awt.Color(0, 255, 255));
+        BuyButton.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        BuyButton.setForeground(new java.awt.Color(0, 51, 255));
+        BuyButton.setText("Buy");
+        BuyButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                BuyButtonMouseClicked(evt);
             }
         });
 
@@ -425,7 +421,7 @@ public class MainScreen extends javax.swing.JFrame{
                         .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(437, 437, 437)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(BuyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -438,7 +434,7 @@ public class MainScreen extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BuyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -456,24 +452,24 @@ public class MainScreen extends javax.swing.JFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+            
     
-    private void ProductButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton1MouseClicked
-                int productNum = 0;
+    public String ProductButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton1MouseClicked
+        
+            int productNum = 0;
                 Font font = new Font("Arial", Font.BOLD, 20);
                 Products p = this.MyShop.ShoppingProducts().get(productNum);
-                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+                String Producttxt1 = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
+                this.InternalProductText.setText(Producttxt1);
                 
                 
+                return Producttxt1;   
     }//GEN-LAST:event_ProductButton1MouseClicked
 
-    private void ProductButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProductButton1ActionPerformed
 
-    private void ProductButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton2MouseClicked
+    public void ProductButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton2MouseClicked
                 int productNum = 1;
                 Font font = new Font("Arial", Font.BOLD, 20);
                 Products p = this.MyShop.ShoppingProducts().get(productNum);
@@ -485,13 +481,17 @@ public class MainScreen extends javax.swing.JFrame{
     }//GEN-LAST:event_ProductButton2MouseClicked
 
     private void ProductButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton3MouseClicked
-                int productNum = 2;
+        
+            int productNum = 2;
                 Font font = new Font("Arial", Font.BOLD, 20);
                 Products p = this.MyShop.ShoppingProducts().get(productNum);
                 String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+        
+        
+        
     }//GEN-LAST:event_ProductButton3MouseClicked
 
     private void ProductButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton4MouseClicked
@@ -582,13 +582,16 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
     }//GEN-LAST:event_DigitalItemButton4MouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    public String BuyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuyButtonMouseClicked
         CheckoutScreen scrn = new CheckoutScreen();
         scrn.setVisible(true);
         scrn.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton1MouseClicked
+        String Orders = this.InternalProductText.getText();
+             return Orders;
+    }//GEN-LAST:event_BuyButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -638,6 +641,7 @@ public class MainScreen extends javax.swing.JFrame{
     private javax.swing.JPanel BookPanel2;
     private javax.swing.JPanel BookPanel3;
     private javax.swing.JPanel BookPanel4;
+    private javax.swing.JButton BuyButton;
     private javax.swing.JTabbedPane DgitalItemsTab;
     private javax.swing.JButton DigitalItemButton1;
     private javax.swing.JButton DigitalItemButton2;
@@ -657,7 +661,6 @@ public class MainScreen extends javax.swing.JFrame{
     private javax.swing.JPanel ProductPanel2;
     private javax.swing.JPanel ProductPanel3;
     private javax.swing.JPanel ProductPanel4;
-    private javax.swing.JButton jButton1;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

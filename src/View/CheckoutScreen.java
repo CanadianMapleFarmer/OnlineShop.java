@@ -31,10 +31,11 @@ public class CheckoutScreen extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        CheckoutTextArea = new javax.swing.JTextArea();
+        AddProductsButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         CheckoutConfirmCheckBox = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        CheckoutButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,12 +51,24 @@ public class CheckoutScreen extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 0));
         jPanel2.setLayout(null);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        CheckoutTextArea.setColumns(20);
+        CheckoutTextArea.setRows(5);
+        jScrollPane1.setViewportView(CheckoutTextArea);
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(30, 10, 1030, 290);
+
+        AddProductsButton.setBackground(new java.awt.Color(0, 255, 255));
+        AddProductsButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        AddProductsButton.setForeground(new java.awt.Color(0, 51, 255));
+        AddProductsButton.setText("Add products");
+        AddProductsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AddProductsButtonMouseClicked(evt);
+            }
+        });
+        jPanel2.add(AddProductsButton);
+        AddProductsButton.setBounds(470, 320, 170, 30);
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 51));
         jPanel3.setLayout(null);
@@ -66,12 +79,17 @@ public class CheckoutScreen extends javax.swing.JFrame {
         jPanel3.add(CheckoutConfirmCheckBox);
         CheckoutConfirmCheckBox.setBounds(470, 10, 170, 25);
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 255));
-        jButton1.setText("Checkout");
-        jPanel3.add(jButton1);
-        jButton1.setBounds(480, 50, 140, 30);
+        CheckoutButton.setBackground(new java.awt.Color(0, 255, 255));
+        CheckoutButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        CheckoutButton.setForeground(new java.awt.Color(0, 51, 255));
+        CheckoutButton.setText("Checkout");
+        CheckoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CheckoutButtonMouseClicked(evt);
+            }
+        });
+        jPanel3.add(CheckoutButton);
+        CheckoutButton.setBounds(480, 50, 140, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,6 +111,19 @@ public class CheckoutScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void AddProductsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddProductsButtonMouseClicked
+        MainScreen scrn = new MainScreen();
+        this.CheckoutTextArea.setLineWrap(true);
+        this.CheckoutTextArea.setText(scrn.BuyButtonMouseClicked(evt));
+        
+        
+        
+    }//GEN-LAST:event_AddProductsButtonMouseClicked
+
+    private void CheckoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckoutButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CheckoutButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -127,18 +158,20 @@ public class CheckoutScreen extends javax.swing.JFrame {
                 CheckoutScreen scr = new CheckoutScreen();
                 scr.setVisible(true);
                 scr.setLocationRelativeTo(null);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddProductsButton;
+    private javax.swing.JButton CheckoutButton;
     private javax.swing.JCheckBox CheckoutConfirmCheckBox;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextArea CheckoutTextArea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
