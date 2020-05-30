@@ -5,17 +5,32 @@
  */
 package View;
 
-/**
- *
- * @author Klopp
- */
+import Model.Books;
+import Model.Products;
+import Model.DigitalItems;
 public class CheckoutScreen extends javax.swing.JFrame {
-
-    /**
-     * Creates new form CheckoutScreen
-     */
-    public CheckoutScreen() {
+    
+    Products OrderedProduct;
+    Books OrderedBooks;
+    DigitalItems OrderedDigitalItems;
+    public CheckoutScreen(Products p, DigitalItems d, Books b) {
         initComponents();
+        if (p != null) {
+            this.OrderedProduct = p;
+            this.CheckoutTextArea.setLineWrap(true);
+            this.CheckoutTextArea.setText("Product ID: " + p.getProductID()+ "\n" + "Product name: " + p.getProductName() + "\n" + "Product price: R" + p.getProductPrice() + "\n" + "Product description: " + p.getProductDescription() );
+        }else if (b != null) {
+                this.OrderedBooks = b;
+                this.CheckoutTextArea.setLineWrap(true);
+                this.CheckoutTextArea.setText("Book ID: " + b.getBookID()+ "\n" + "Book name: " + b.getBookName() + "\n" + "Book price: R" + b.getBookPrice() + "\n" + "Book description: " + b.getBookDiscription() );
+            } else if (d != null){
+                this.OrderedDigitalItems = d;
+                this.CheckoutTextArea.setLineWrap(true);
+                this.CheckoutTextArea.setText("Digital Item ID: " + d.getDigitalItemID() + "\n" + "Digital Item name: " + d.getDigitalItemName() + "\n" + "Digital Item price: R" + d.getDigitalItemPrice() + "\n" + "Digital Item description: " + d.getDigitalItemDescription()); 
+            }
+        
+        
+        
     }
 
     /**
@@ -32,7 +47,6 @@ public class CheckoutScreen extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         CheckoutTextArea = new javax.swing.JTextArea();
-        AddProductsButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         CheckoutConfirmCheckBox = new javax.swing.JCheckBox();
         CheckoutButton = new javax.swing.JButton();
@@ -57,18 +71,6 @@ public class CheckoutScreen extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(30, 10, 1030, 290);
-
-        AddProductsButton.setBackground(new java.awt.Color(0, 255, 255));
-        AddProductsButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        AddProductsButton.setForeground(new java.awt.Color(0, 51, 255));
-        AddProductsButton.setText("Add products");
-        AddProductsButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AddProductsButtonMouseClicked(evt);
-            }
-        });
-        jPanel2.add(AddProductsButton);
-        AddProductsButton.setBounds(470, 320, 170, 30);
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 51));
         jPanel3.setLayout(null);
@@ -112,15 +114,6 @@ public class CheckoutScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AddProductsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddProductsButtonMouseClicked
-        MainScreen scrn = new MainScreen();
-        this.CheckoutTextArea.setLineWrap(true);
-        this.CheckoutTextArea.setText(scrn.BuyButtonMouseClicked(evt));
-        
-        
-        
-    }//GEN-LAST:event_AddProductsButtonMouseClicked
-
     private void CheckoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckoutButtonMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_CheckoutButtonMouseClicked
@@ -155,7 +148,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CheckoutScreen scr = new CheckoutScreen();
+                CheckoutScreen scr = new CheckoutScreen(null, null, null);
                 scr.setVisible(true);
                 scr.setLocationRelativeTo(null);
                 
@@ -164,7 +157,6 @@ public class CheckoutScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AddProductsButton;
     private javax.swing.JButton CheckoutButton;
     private javax.swing.JCheckBox CheckoutConfirmCheckBox;
     private javax.swing.JTextArea CheckoutTextArea;

@@ -9,6 +9,24 @@ import Model.Products;
 import Model.Books;
 import Model.DigitalItems;
 import java.awt.Font;
+import java.awt.HeadlessException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import javax.swing.JButton;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import Controller.Shopping;
+import java.util.HashSet;
+import javax.swing.ImageIcon;
+import Model.Products;
+import Model.Books;
+import Model.DigitalItems;
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JTextField;
@@ -20,6 +38,59 @@ import javax.swing.JTextField;
 public class MainScreen extends javax.swing.JFrame{
 
     Shopping MyShop = new Shopping();
+    Books CurtrentBooks = null;
+    DigitalItems CurrentDigitalItems = null;
+    Products CurrentProduct = null;
+
+    public MainScreen(JButton BookButton1, JButton BookButton2, JButton BookButton3, JButton BookButton4, JPanel BookPanel1, JPanel BookPanel2, JPanel BookPanel3, JPanel BookPanel4, JButton BuyButton, JTabbedPane DgitalItemsTab, JButton DigitalItemButton1, JButton DigitalItemButton2, JButton DigitalItemButton3, JButton DigitalItemButton4, JPanel DigitalItemPanel1, JPanel DigitalItemPanel2, JPanel DigitalItemPanel3, JPanel DigitalItemPanel4, JTextArea InternalProductText, JScrollPane InternalScrollPane, JButton ProductButton1, JButton ProductButton2, JButton ProductButton3, JButton ProductButton4, JPanel ProductPanel1, JPanel ProductPanel2, JPanel ProductPanel3, JPanel ProductPanel4, JInternalFrame jInternalFrame1, JLabel jLabel1, JLabel jLabel10, JLabel jLabel11, JLabel jLabel12, JLabel jLabel13, JLabel jLabel2, JLabel jLabel3, JLabel jLabel4, JLabel jLabel5, JLabel jLabel6, JLabel jLabel7, JLabel jLabel8, JLabel jLabel9, JPanel jPanel1, JPanel jPanel2, JPanel jPanel3, JPanel jPanel4, JPanel jPanel5) throws HeadlessException {
+        this.BookButton1 = BookButton1;
+        this.BookButton2 = BookButton2;
+        this.BookButton3 = BookButton3;
+        this.BookButton4 = BookButton4;
+        this.BookPanel1 = BookPanel1;
+        this.BookPanel2 = BookPanel2;
+        this.BookPanel3 = BookPanel3;
+        this.BookPanel4 = BookPanel4;
+        this.BuyButton = BuyButton;
+        this.DgitalItemsTab = DgitalItemsTab;
+        this.DigitalItemButton1 = DigitalItemButton1;
+        this.DigitalItemButton2 = DigitalItemButton2;
+        this.DigitalItemButton3 = DigitalItemButton3;
+        this.DigitalItemButton4 = DigitalItemButton4;
+        this.DigitalItemPanel1 = DigitalItemPanel1;
+        this.DigitalItemPanel2 = DigitalItemPanel2;
+        this.DigitalItemPanel3 = DigitalItemPanel3;
+        this.DigitalItemPanel4 = DigitalItemPanel4;
+        this.InternalProductText = InternalProductText;
+        this.InternalScrollPane = InternalScrollPane;
+        this.ProductButton1 = ProductButton1;
+        this.ProductButton2 = ProductButton2;
+        this.ProductButton3 = ProductButton3;
+        this.ProductButton4 = ProductButton4;
+        this.ProductPanel1 = ProductPanel1;
+        this.ProductPanel2 = ProductPanel2;
+        this.ProductPanel3 = ProductPanel3;
+        this.ProductPanel4 = ProductPanel4;
+        this.jInternalFrame1 = jInternalFrame1;
+        this.jLabel1 = jLabel1;
+        this.jLabel10 = jLabel10;
+        this.jLabel11 = jLabel11;
+        this.jLabel12 = jLabel12;
+        this.jLabel13 = jLabel13;
+        this.jLabel2 = jLabel2;
+        this.jLabel3 = jLabel3;
+        this.jLabel4 = jLabel4;
+        this.jLabel5 = jLabel5;
+        this.jLabel6 = jLabel6;
+        this.jLabel7 = jLabel7;
+        this.jLabel8 = jLabel8;
+        this.jLabel9 = jLabel9;
+        this.jPanel1 = jPanel1;
+        this.jPanel2 = jPanel2;
+        this.jPanel3 = jPanel3;
+        this.jPanel4 = jPanel4;
+        this.jPanel5 = jPanel5;
+    }
     
     public MainScreen() {
         initComponents();
@@ -390,7 +461,7 @@ public class MainScreen extends javax.swing.JFrame{
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -464,6 +535,9 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(Producttxt1);
                 
+                this.CurrentProduct = p;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = null;
                 
                 return Producttxt1;   
     }//GEN-LAST:event_ProductButton1MouseClicked
@@ -478,6 +552,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
                 
+                this.CurrentProduct = p;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = null;
+                
     }//GEN-LAST:event_ProductButton2MouseClicked
 
     private void ProductButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton3MouseClicked
@@ -489,6 +567,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = p;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = null;
         
         
         
@@ -502,6 +584,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = p;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = null;
     }//GEN-LAST:event_ProductButton4MouseClicked
 
     private void BookButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton1MouseClicked
@@ -512,6 +598,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = p;
+                this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton1MouseClicked
 
     private void BookButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton2MouseClicked
@@ -522,6 +612,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = p;
+                this.CurrentDigitalItems = null;            
     }//GEN-LAST:event_BookButton2MouseClicked
 
     private void BookButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton3MouseClicked
@@ -532,6 +626,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = p;
+                this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton3MouseClicked
 
     private void BookButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton4MouseClicked
@@ -542,6 +640,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = p;
+                this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton4MouseClicked
 
     private void DigitalItemButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton1MouseClicked
@@ -552,6 +654,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton1MouseClicked
 
     private void DigitalItemButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton2MouseClicked
@@ -562,6 +668,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton2MouseClicked
 
     private void DigitalItemButton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton3MouseDragged
@@ -572,6 +682,10 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setFont(font);
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
+                
+                this.CurrentProduct = null;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton3MouseDragged
 
     private void DigitalItemButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton4MouseClicked
@@ -583,13 +697,17 @@ public class MainScreen extends javax.swing.JFrame{
                 this.InternalProductText.setLineWrap(true);
                 this.InternalProductText.setText(txt);
                 
+                this.CurrentProduct = null;
+                this.CurtrentBooks = null;
+                this.CurrentDigitalItems = p;   
     }//GEN-LAST:event_DigitalItemButton4MouseClicked
 
     public String BuyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuyButtonMouseClicked
-        CheckoutScreen scrn = new CheckoutScreen();
+        String Orders = this.InternalProductText.getText();
+        CheckoutScreen scrn = new CheckoutScreen(this.CurrentProduct, this.CurrentDigitalItems, this.CurtrentBooks);
         scrn.setVisible(true);
         scrn.setLocationRelativeTo(null);
-        String Orders = this.InternalProductText.getText();
+        
              return Orders;
     }//GEN-LAST:event_BuyButtonMouseClicked
 
