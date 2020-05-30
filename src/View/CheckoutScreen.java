@@ -8,6 +8,9 @@ package View;
 import Model.Books;
 import Model.Products;
 import Model.DigitalItems;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 public class CheckoutScreen extends javax.swing.JFrame {
     
     Products OrderedProduct;
@@ -115,7 +118,15 @@ public class CheckoutScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CheckoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckoutButtonMouseClicked
-        // TODO add your handling code here:
+        if (this.CheckoutConfirmCheckBox.isSelected()) {
+            DeliveryScreen scrn = new DeliveryScreen();
+            scrn.setVisible(true);
+            scrn.setLocationRelativeTo(null);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "You have not confirmed checkout!");
+        }
+        
     }//GEN-LAST:event_CheckoutButtonMouseClicked
 
     /**
