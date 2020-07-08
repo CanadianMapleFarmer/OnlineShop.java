@@ -1,6 +1,5 @@
 package View;
 
-;
 
 import Controller.Shopping;
 import java.util.HashSet;
@@ -188,7 +187,11 @@ public class MainScreen extends javax.swing.JFrame{
                 ProductButton1MouseClicked(evt);
             }
         });
-        
+        ProductButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProductButton1ActionPerformed(evt);
+            }
+        });
         ProductPanel1.add(ProductButton1);
         ProductButton1.setBounds(0, 0, 240, 210);
 
@@ -222,7 +225,7 @@ public class MainScreen extends javax.swing.JFrame{
 
         ProductPanel4.setLayout(null);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\Shoes.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Shoes.png"))); // NOI18N
         ProductPanel4.add(jLabel5);
         jLabel5.setBounds(60, 40, 120, 120);
 
@@ -267,7 +270,7 @@ public class MainScreen extends javax.swing.JFrame{
 
         BookPanel1.setLayout(null);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\WoomenInTheWindow.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WoomenInTheWindow.jpg"))); // NOI18N
         BookPanel1.add(jLabel6);
         jLabel6.setBounds(60, 10, 130, 190);
 
@@ -281,7 +284,7 @@ public class MainScreen extends javax.swing.JFrame{
 
         BookPanel2.setLayout(null);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\BehindBlueEyes.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/BehindBlueEyes.jpg"))); // NOI18N
         BookPanel2.add(jLabel7);
         jLabel7.setBounds(50, 10, 140, 190);
 
@@ -295,7 +298,7 @@ public class MainScreen extends javax.swing.JFrame{
 
         BookPanel3.setLayout(null);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\Spud.jpg")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Spud.jpg"))); // NOI18N
         BookPanel3.add(jLabel8);
         jLabel8.setBounds(60, 10, 130, 190);
 
@@ -309,7 +312,7 @@ public class MainScreen extends javax.swing.JFrame{
 
         BookPanel4.setLayout(null);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\diary-of-a-wimpy-kid.jpg")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/diary-of-a-wimpy-kid.jpg"))); // NOI18N
         BookPanel4.add(jLabel9);
         jLabel9.setBounds(60, 10, 130, 190);
 
@@ -354,7 +357,7 @@ public class MainScreen extends javax.swing.JFrame{
 
         DigitalItemPanel1.setLayout(null);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\ButterflyKnifeSlaugter.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/ButterflyKnifeSlaugter.png"))); // NOI18N
         DigitalItemPanel1.add(jLabel10);
         jLabel10.setBounds(20, 20, 200, 150);
 
@@ -364,11 +367,11 @@ public class MainScreen extends javax.swing.JFrame{
             }
         });
         DigitalItemPanel1.add(DigitalItemButton1);
-        DigitalItemButton1.setBounds(0, 0, 240, 210);
+        DigitalItemButton1.setBounds(0, 0, 240, 200);
 
         DigitalItemPanel2.setLayout(null);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\AK47uAlienred.png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/AK47uAlienred.png"))); // NOI18N
         DigitalItemPanel2.add(jLabel11);
         jLabel11.setBounds(40, 20, 160, 150);
 
@@ -378,11 +381,11 @@ public class MainScreen extends javax.swing.JFrame{
             }
         });
         DigitalItemPanel2.add(DigitalItemButton2);
-        DigitalItemButton2.setBounds(0, 0, 240, 210);
+        DigitalItemButton2.setBounds(0, 0, 240, 200);
 
         DigitalItemPanel3.setLayout(null);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\KarambitFade.png")); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/KarambitFade.png"))); // NOI18N
         DigitalItemPanel3.add(jLabel12);
         jLabel12.setBounds(50, 40, 150, 120);
 
@@ -392,11 +395,11 @@ public class MainScreen extends javax.swing.JFrame{
             }
         });
         DigitalItemPanel3.add(DigitalItemButton3);
-        DigitalItemButton3.setBounds(0, 0, 240, 210);
+        DigitalItemButton3.setBounds(0, 0, 240, 200);
 
         DigitalItemPanel4.setLayout(null);
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Klopp\\OneDrive\\Desktop\\PAT .png's\\TemperedMetalFacemask.png")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/TemperedMetalFacemask.png"))); // NOI18N
         DigitalItemPanel4.add(jLabel13);
         jLabel13.setBounds(50, 40, 140, 120);
 
@@ -406,7 +409,7 @@ public class MainScreen extends javax.swing.JFrame{
             }
         });
         DigitalItemPanel4.add(DigitalItemButton4);
-        DigitalItemButton4.setBounds(0, 0, 240, 210);
+        DigitalItemButton4.setBounds(0, 0, 240, 200);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -432,7 +435,7 @@ public class MainScreen extends javax.swing.JFrame{
                     .addComponent(DigitalItemPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(DigitalItemPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                     .addComponent(DigitalItemPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         DgitalItemsTab.addTab("Digital items", jPanel3);
@@ -461,7 +464,7 @@ public class MainScreen extends javax.swing.JFrame{
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                .addComponent(InternalScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

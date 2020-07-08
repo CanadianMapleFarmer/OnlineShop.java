@@ -274,7 +274,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel5">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\Shoes.png"/>
+                          <Image iconType="3" name="/View/Shoes.png"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -352,7 +352,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel6">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\WoomenInTheWindow.jpg"/>
+                          <Image iconType="3" name="/View/WoomenInTheWindow.jpg"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -382,7 +382,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel7">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\BehindBlueEyes.jpg"/>
+                          <Image iconType="3" name="/View/BehindBlueEyes.jpg"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -412,7 +412,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel8">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\Spud.jpg"/>
+                          <Image iconType="3" name="/View/Spud.jpg"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -442,7 +442,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel9">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\diary-of-a-wimpy-kid.jpg"/>
+                          <Image iconType="3" name="/View/diary-of-a-wimpy-kid.jpg"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -505,7 +505,7 @@
                               <Component id="DigitalItemPanel2" pref="203" max="32767" attributes="0"/>
                               <Component id="DigitalItemPanel1" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="20" max="32767" attributes="0"/>
+                          <EmptySpace pref="15" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -520,7 +520,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel10">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\ButterflyKnifeSlaugter.png"/>
+                          <Image iconType="3" name="/View/ButterflyKnifeSlaugter.png"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -535,7 +535,7 @@
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="0" width="240" height="210"/>
+                          <AbsoluteConstraints x="0" y="0" width="240" height="200"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -550,7 +550,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel11">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\AK47uAlienred.png"/>
+                          <Image iconType="3" name="/View/AK47uAlienred.png"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -565,7 +565,7 @@
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="0" width="240" height="210"/>
+                          <AbsoluteConstraints x="0" y="0" width="240" height="200"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -580,7 +580,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel12">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\KarambitFade.png"/>
+                          <Image iconType="3" name="/View/KarambitFade.png"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -595,7 +595,7 @@
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="0" width="240" height="210"/>
+                          <AbsoluteConstraints x="0" y="0" width="240" height="200"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -610,7 +610,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel13">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="2" name="C:\Users\Klopp\OneDrive\Desktop\PAT .png&apos;s\TemperedMetalFacemask.png"/>
+                          <Image iconType="3" name="/View/TemperedMetalFacemask.png"/>
                         </Property>
                       </Properties>
                       <Constraints>
@@ -625,7 +625,7 @@
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="0" y="0" width="240" height="210"/>
+                          <AbsoluteConstraints x="0" y="0" width="240" height="200"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -668,7 +668,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="InternalScrollPane" pref="334" max="32767" attributes="0"/>
+                      <Component id="InternalScrollPane" pref="386" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
