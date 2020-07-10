@@ -1,3 +1,4 @@
+//Gerhard Kloppers
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -102,17 +103,16 @@ public class DeliveryScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DeliveryStartButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeliveryStartButtonMouseClicked
-        
-        
+
         for (int i = 0; i <= 100; i++) {
             try {
                 Thread.sleep(100);
                 this.DeliveryProgressPercentage.setText(i + "%");
                 this.DeliveryProgressBar.setValue(i);
-                
+
             } catch (Exception e) {
-            }   
-        }  
+            }
+        }
     }//GEN-LAST:event_DeliveryStartButtonMouseClicked
 
     /**

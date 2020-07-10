@@ -1,3 +1,4 @@
+//Gerhard Kloppers
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -109,22 +110,21 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AccCreateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccCreateButtonMouseClicked
-       CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
+        CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
         String UserName = AccCreateUsername.getText();
         String Password = new String(AccCreatePassword.getPassword());
         String PassConfirm = new String(AccCreatePassConfirm.getPassword());
         boolean found = false;
         try {
             if (Password.compareTo(PassConfirm) == 0) {
-                try (FileWriter fw = new FileWriter("LoginDetails.txt" ,true)) {
-                    fw.write(UserName + "#" + Password + "\n");                  
+                try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
+                    fw.write(UserName + "#" + Password + "\n");
                     found = true;
-                    
                 }
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Passwords do not match!");
             }
-            
+
             if (found) {
                 JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
                 Acc.setVisible(false);
@@ -133,13 +133,12 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
                 login.setVisible(true);
                 login.setLocationRelativeTo(null);
                 this.dispose();
-                }
-            
-            
+            }
+
         } catch (IOException ex) {
             Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
         }
-      
+
     }//GEN-LAST:event_AccCreateButtonMouseClicked
 
     /**
@@ -174,7 +173,7 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
             public void run() {
                 CreateAccountLogMeIn acc = new CreateAccountLogMeIn();
                 acc.setVisible(true);
-                acc.setLocationRelativeTo(null);               
+                acc.setLocationRelativeTo(null);
             }
         });
     }

@@ -1,6 +1,8 @@
+//Gerhard Kloppers
 package Model;
 
 public class Products {
+
     private String ProductID;
     private String ProductName;
     private int ProductPrice;
@@ -12,8 +14,6 @@ public class Products {
         this.ProductPrice = ProductPrice;
         this.ProductDescription = ProductDescription;
     }
-
-    
 
     public String getProductDescription() {
         return ProductDescription;
@@ -51,6 +51,5 @@ public class Products {
     public String toString() {
         return "Products{" + "ProductName=" + ProductName + ", ProductPrice=" + ProductPrice + ", ProductID=" + ProductID + ", PeoductDescription=" + ProductDescription + '}';
     }
-    
-    
+
 }

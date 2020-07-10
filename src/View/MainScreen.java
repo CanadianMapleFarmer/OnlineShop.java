@@ -1,5 +1,5 @@
+//Gerhard Kloppers
 package View;
-
 
 import Controller.Shopping;
 import java.util.HashSet;
@@ -34,7 +34,7 @@ import javax.swing.JTextField;
  *
  * @author Klopp
  */
-public class MainScreen extends javax.swing.JFrame{
+public class MainScreen extends javax.swing.JFrame {
 
     Shopping MyShop = new Shopping();
     Books CurtrentBooks = null;
@@ -90,7 +90,7 @@ public class MainScreen extends javax.swing.JFrame{
         this.jPanel4 = jPanel4;
         this.jPanel5 = jPanel5;
     }
-    
+
     public MainScreen() {
         initComponents();
     }
@@ -185,11 +185,6 @@ public class MainScreen extends javax.swing.JFrame{
         ProductButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProductButton1MouseClicked(evt);
-            }
-        });
-        ProductButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProductButton1ActionPerformed(evt);
             }
         });
         ProductPanel1.add(ProductButton1);
@@ -525,184 +520,182 @@ public class MainScreen extends javax.swing.JFrame{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-            
-    
+
+
     public String ProductButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton1MouseClicked
-        
-            int productNum = 0;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Products p = this.MyShop.ShoppingProducts().get(productNum);
-                String Producttxt1 = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(Producttxt1);
-                
-                this.CurrentProduct = p;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = null;
-                
-                return Producttxt1;   
+
+        int productNum = 0;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Products p = this.MyShop.ShoppingProducts().get(productNum);
+        String Producttxt1 = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(Producttxt1);
+
+        this.CurrentProduct = p;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = null;
+
+        return Producttxt1;
     }//GEN-LAST:event_ProductButton1MouseClicked
 
 
     public void ProductButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton2MouseClicked
-                int productNum = 1;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Products p = this.MyShop.ShoppingProducts().get(productNum);
-                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = p;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = null;
-                
+        int productNum = 1;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Products p = this.MyShop.ShoppingProducts().get(productNum);
+        String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = p;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = null;
+
     }//GEN-LAST:event_ProductButton2MouseClicked
 
     private void ProductButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton3MouseClicked
-        
-            int productNum = 2;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Products p = this.MyShop.ShoppingProducts().get(productNum);
-                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = p;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = null;
-        
-        
-        
+
+        int productNum = 2;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Products p = this.MyShop.ShoppingProducts().get(productNum);
+        String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = p;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = null;
+
+
     }//GEN-LAST:event_ProductButton3MouseClicked
 
     private void ProductButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton4MouseClicked
-                int productNum = 3;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Products p = this.MyShop.ShoppingProducts().get(productNum);
-                String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = p;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = null;
+        int productNum = 3;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Products p = this.MyShop.ShoppingProducts().get(productNum);
+        String txt = "Product ID: " + p.getProductID() + System.lineSeparator() + "\n" + "Product name: " + p.getProductName() + System.lineSeparator() + "\n" + "Product price: R" + p.getProductPrice() + System.lineSeparator() + "\n" + "Product description: " + p.getProductDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = p;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = null;
     }//GEN-LAST:event_ProductButton4MouseClicked
 
     private void BookButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton1MouseClicked
-           int bookNum = 0;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Books p = this.MyShop.ShoppingBooks().get(bookNum);
-                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = p;
-                this.CurrentDigitalItems = null;
+        int bookNum = 0;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Books p = this.MyShop.ShoppingBooks().get(bookNum);
+        String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = p;
+        this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton1MouseClicked
 
     private void BookButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton2MouseClicked
         int bookNum = 1;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Books p = this.MyShop.ShoppingBooks().get(bookNum);
-                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = p;
-                this.CurrentDigitalItems = null;            
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Books p = this.MyShop.ShoppingBooks().get(bookNum);
+        String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = p;
+        this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton2MouseClicked
 
     private void BookButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton3MouseClicked
         int bookNum = 2;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Books p = this.MyShop.ShoppingBooks().get(bookNum);
-                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = p;
-                this.CurrentDigitalItems = null;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Books p = this.MyShop.ShoppingBooks().get(bookNum);
+        String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = p;
+        this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton3MouseClicked
 
     private void BookButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookButton4MouseClicked
         int bookNum = 3;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                Books p = this.MyShop.ShoppingBooks().get(bookNum);
-                String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = p;
-                this.CurrentDigitalItems = null;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        Books p = this.MyShop.ShoppingBooks().get(bookNum);
+        String txt = "Book ID: " + p.getBookID() + System.lineSeparator() + "\n" + "Book name: " + p.getBookName() + System.lineSeparator() + "\n" + "Book price: R" + p.getBookPrice() + System.lineSeparator() + "\n" + "Book description: " + p.getBookDiscription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = p;
+        this.CurrentDigitalItems = null;
     }//GEN-LAST:event_BookButton4MouseClicked
 
     private void DigitalItemButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton1MouseClicked
         int digitalitemNum = 0;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
-                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = p;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+        String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton1MouseClicked
 
     private void DigitalItemButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton2MouseClicked
         int digitalitemNum = 1;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
-                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = p;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+        String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton2MouseClicked
 
     private void DigitalItemButton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton3MouseDragged
         int digitalitemNum = 2;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
-                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = p;
+        Font font = new Font("Arial", Font.BOLD, 20);
+        DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+        String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton3MouseDragged
 
     private void DigitalItemButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DigitalItemButton4MouseClicked
         int digitalitemNum = 3;
-                Font font = new Font("Arial", Font.BOLD, 20);
-                DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
-                String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
-                this.InternalProductText.setFont(font);
-                this.InternalProductText.setLineWrap(true);
-                this.InternalProductText.setText(txt);
-                
-                this.CurrentProduct = null;
-                this.CurtrentBooks = null;
-                this.CurrentDigitalItems = p;   
+        Font font = new Font("Arial", Font.BOLD, 20);
+        DigitalItems p = this.MyShop.ShoppingDigitalItems().get(digitalitemNum);
+        String txt = "Digital Item ID: " + p.getDigitalItemID() + System.lineSeparator() + "\n" + "Digital Item name: " + p.getDigitalItemName() + System.lineSeparator() + "\n" + "Digital Item price: R" + p.getDigitalItemPrice() + System.lineSeparator() + "\n" + "Digital Item description: " + p.getDigitalItemDescription();
+        this.InternalProductText.setFont(font);
+        this.InternalProductText.setLineWrap(true);
+        this.InternalProductText.setText(txt);
+
+        this.CurrentProduct = null;
+        this.CurtrentBooks = null;
+        this.CurrentDigitalItems = p;
     }//GEN-LAST:event_DigitalItemButton4MouseClicked
 
     public String BuyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuyButtonMouseClicked
@@ -710,8 +703,8 @@ public class MainScreen extends javax.swing.JFrame{
         CheckoutScreen scrn = new CheckoutScreen(this.CurrentProduct, this.CurrentDigitalItems, this.CurtrentBooks);
         scrn.setVisible(true);
         scrn.setLocationRelativeTo(null);
-        
-             return Orders;
+
+        return Orders;
     }//GEN-LAST:event_BuyButtonMouseClicked
 
     /**
@@ -742,13 +735,10 @@ public class MainScreen extends javax.swing.JFrame{
         //</editor-fold>
 
         /* Create and display the form */
-        
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainScreen().setVisible(true);
-                
-        
+
             }
         });
     }
@@ -803,5 +793,4 @@ public class MainScreen extends javax.swing.JFrame{
     private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 
-    
 }

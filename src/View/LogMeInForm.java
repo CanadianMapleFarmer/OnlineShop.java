@@ -1,10 +1,10 @@
+//Gerhard Kloppers
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package View;
-
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -139,48 +139,66 @@ public class LogMeInForm extends javax.swing.JFrame {
     }//GEN-LAST:event_LogInCancelButtonActionPerformed
 
     private void LogInConfrimButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInConfrimButtonMouseClicked
-         LogMeInForm MyLogin = new LogMeInForm();
-         File file = new File("LoginDetails.txt");
-         boolean found = false;
-         String username = this.UsernameLogInText.getText();
-         String password = new String(this.PasswordLogInText.getPassword());
-         String tempUsername;
-         String tempPassword;
-         String Line;
-         try {
-            Scanner scFile = new Scanner(file);
-             while (scFile.hasNext()) {        
-                 Line = scFile.nextLine();
-                 Scanner inLine = new Scanner(Line).useDelimiter("#");
-                 tempUsername = inLine.next();
-                 tempPassword = inLine.next();
-                 
-                 if (username.compareTo(tempUsername) == 0 && password.compareTo(tempPassword) == 0) {
-                   found = true;                 
-                 } 
-             }
-                 if (found) {
-                     JOptionPane.showMessageDialog(rootPane, "You have succesfully logged in!");
-                     MainScreen Screen = new MainScreen();
-                     Screen.setVisible(true);
-                     Screen.setLocationRelativeTo(null);
-                     this.dispose();
-                 }else {
-                     JOptionPane.showMessageDialog(rootPane, "Your username and/or password is incorrect!");
-                 }
-             
-        } catch (FileNotFoundException e) {
-             System.out.println("File not found!!!" + e);
+        LogMeInForm MyLogin = new LogMeInForm();
+        File file = new File("LoginDetails.txt");
+        boolean UsernameFound = false;
+        boolean PasswordFound = false;
+        String username = this.UsernameLogInText.getText();
+        String password = new String(this.PasswordLogInText.getPassword());
+        String tempUsername;
+        String tempPassword;
+        String Line;
+        if (this.UsernameLogInText.getText().isEmpty() == true || this.PasswordLogInText.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Please fill in you Username/Password in the fields!");
+            this.UsernameLogInText.setText("");
+            this.PasswordLogInText.setText("");
+            return;
         }
-         
-         
+        try {
+            Scanner scFile = new Scanner(file);
+            while (scFile.hasNext()) {
+                Line = scFile.nextLine();
+                Scanner inLine = new Scanner(Line).useDelimiter("#");
+                tempUsername = inLine.next();
+                tempPassword = inLine.next();
+            
+                if (username.compareTo(tempUsername) == 0) {
+                    UsernameFound = true;
+                }
+                if (password.compareTo(tempPassword) == 0) {
+                    PasswordFound = true;
+                }
+            }
+            if (!UsernameFound) {
+                JOptionPane.showMessageDialog(rootPane, "Username is invalid!");
+                this.UsernameLogInText.setText("");
+                return;
+            } 
+            if (!PasswordFound) {
+                JOptionPane.showMessageDialog(rootPane, "Password is invalid!");
+                this.PasswordLogInText.setText("");
+                return;
+            }
+            if (UsernameFound && PasswordFound) {
+                JOptionPane.showMessageDialog(rootPane, "You have succesfully logged in!");
+                MainScreen Screen = new MainScreen();
+                Screen.setVisible(true);
+                Screen.setLocationRelativeTo(null);
+                this.dispose();
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!!!" + e);
+        }
+
+
     }//GEN-LAST:event_LogInConfrimButtonMouseClicked
 
     private void CreateAccLabelClickableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateAccLabelClickableMouseClicked
         CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
         Acc.setVisible(true);
         Acc.setLocationRelativeTo(null);
-        
+
         this.dispose();
     }//GEN-LAST:event_CreateAccLabelClickableMouseClicked
 
@@ -217,7 +235,7 @@ public class LogMeInForm extends javax.swing.JFrame {
                 LogMeInForm MyLogMeInForm = new LogMeInForm();
                 MyLogMeInForm.setVisible(true);
                 MyLogMeInForm.setLocationRelativeTo(null);
-                
+
             }
         });
     }

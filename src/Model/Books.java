@@ -1,9 +1,8 @@
-
+//Gerhard Kloppers
 package Model;
 
-
-
 public class Books {
+
     private String BookID;
     private String BookName;
     private int BookPrice;
@@ -52,7 +51,5 @@ public class Books {
     public String toString() {
         return "Books{" + "BookID=" + BookID + ", BookName=" + BookName + ", BookPrice=" + BookPrice + ", BookDiscription=" + BookDiscription + '}';
     }
-    
-    
-    
+
 }

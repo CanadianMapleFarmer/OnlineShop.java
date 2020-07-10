@@ -1,3 +1,4 @@
+//Gerhard Kloppers
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,29 +12,32 @@ import Model.DigitalItems;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+
 public class CheckoutScreen extends javax.swing.JFrame {
-    
+
     Products OrderedProduct;
     Books OrderedBooks;
     DigitalItems OrderedDigitalItems;
+
     public CheckoutScreen(Products p, DigitalItems d, Books b) {
         initComponents();
         if (p != null) {
             this.OrderedProduct = p;
             this.CheckoutTextArea.setLineWrap(true);
-            this.CheckoutTextArea.setText("Product ID: " + p.getProductID()+ "\n" + "Product name: " + p.getProductName() + "\n" + "Product price: R" + p.getProductPrice() + "\n" + "Product description: " + p.getProductDescription() );
-        }else if (b != null) {
-                this.OrderedBooks = b;
-                this.CheckoutTextArea.setLineWrap(true);
-                this.CheckoutTextArea.setText("Book ID: " + b.getBookID()+ "\n" + "Book name: " + b.getBookName() + "\n" + "Book price: R" + b.getBookPrice() + "\n" + "Book description: " + b.getBookDiscription() );
-            } else if (d != null){
-                this.OrderedDigitalItems = d;
-                this.CheckoutTextArea.setLineWrap(true);
-                this.CheckoutTextArea.setText("Digital Item ID: " + d.getDigitalItemID() + "\n" + "Digital Item name: " + d.getDigitalItemName() + "\n" + "Digital Item price: R" + d.getDigitalItemPrice() + "\n" + "Digital Item description: " + d.getDigitalItemDescription()); 
-            }
-        
-        
-        
+            this.CheckoutTextArea.setText("Product ID: " + p.getProductID() + "\n" + "Product name: " + p.getProductName() + "\n" + "Product price: R" + p.getProductPrice() + "\n" + "Product description: " + p.getProductDescription());
+            this.CheckoutTextArea.setEditable(false);
+        } else if (b != null) {
+            this.OrderedBooks = b;
+            this.CheckoutTextArea.setLineWrap(true);
+            this.CheckoutTextArea.setText("Book ID: " + b.getBookID() + "\n" + "Book name: " + b.getBookName() + "\n" + "Book price: R" + b.getBookPrice() + "\n" + "Book description: " + b.getBookDiscription());
+            this.CheckoutTextArea.setEditable(false);
+        } else if (d != null) {
+            this.OrderedDigitalItems = d;
+            this.CheckoutTextArea.setLineWrap(true);
+            this.CheckoutTextArea.setText("Digital Item ID: " + d.getDigitalItemID() + "\n" + "Digital Item name: " + d.getDigitalItemName() + "\n" + "Digital Item price: R" + d.getDigitalItemPrice() + "\n" + "Digital Item description: " + d.getDigitalItemDescription());
+            this.CheckoutTextArea.setEditable(false);
+        }
+
     }
 
     /**
@@ -126,7 +130,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(rootPane, "You have not confirmed checkout!");
         }
-        
+
     }//GEN-LAST:event_CheckoutButtonMouseClicked
 
     /**
@@ -162,7 +166,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
                 CheckoutScreen scr = new CheckoutScreen(null, null, null);
                 scr.setVisible(true);
                 scr.setLocationRelativeTo(null);
-                
+
             }
         });
     }
