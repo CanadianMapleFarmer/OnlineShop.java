@@ -12,8 +12,9 @@ public class Shopping {
 
     int counter = 0;
     ArrayList<Products> ProductArr = new ArrayList<>();
-
+//  ArrayList created too store data read by scanner from .txt file
     public ArrayList<Products> ShoppingProducts() {
+//  Try Catch used to catch potential errors like Exceptions
         try {
             File scFile = new File("Product list.txt");
             String ProductID;
@@ -22,7 +23,7 @@ public class Shopping {
             int ProductPrice;
             String Line = "";
             String PrintLine;
-
+//  Scanner created to scan .txt file
             Scanner scLine = new Scanner(scFile);
             while (scLine.hasNext()) {
                 Line = scLine.nextLine();
@@ -31,7 +32,7 @@ public class Shopping {
                 ProductName = InLine.next();
                 ProductPrice = Integer.parseInt(InLine.next());
                 ProductDescription = InLine.next();
-                ProductArr.add(new Products(ProductID, ProductName, ProductPrice, ProductDescription));
+                ProductArr.add(new Products(ProductID, ProductName, ProductPrice, ProductDescription)); // Scanned items are added to the (Product)attribute characteristics
                 counter++;
             }
 

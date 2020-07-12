@@ -115,17 +115,25 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         String Password = new String(AccCreatePassword.getPassword());
         String PassConfirm = new String(AccCreatePassConfirm.getPassword());
         boolean found = false;
+        boolean confirmPassword = false;
+        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0){
+            JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
+            return;
+        }
         try {
             if (Password.compareTo(PassConfirm) == 0) {
                 try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
                     fw.write(UserName + "#" + Password + "\n");
                     found = true;
+                    confirmPassword = true;
                 }
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Passwords do not match!");
             }
-
-            if (found) {
+            if (confirmPassword == false){
+                JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
+                this.AccCreatePassConfirm.setText("");
+                return;
+            }
+            if (found && confirmPassword) {
                 JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
                 Acc.setVisible(false);
                 JOptionPane.showMessageDialog(rootPane, "Please login again.");

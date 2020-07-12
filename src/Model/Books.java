@@ -7,7 +7,7 @@ public class Books {
     private String BookName;
     private int BookPrice;
     private String BookDiscription;
-
+//    Creation of Book Attribute with characteristics
     public Books(String BookID, String BookName, int BookPrice, String BookDiscription) {
         this.BookID = BookID;
         this.BookName = BookName;
