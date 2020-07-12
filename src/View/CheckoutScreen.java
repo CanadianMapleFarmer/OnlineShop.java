@@ -9,8 +9,6 @@ package View;
 import Model.Books;
 import Model.Products;
 import Model.DigitalItems;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class CheckoutScreen extends javax.swing.JFrame {
@@ -24,17 +22,19 @@ public class CheckoutScreen extends javax.swing.JFrame {
         if (p != null) {
             this.OrderedProduct = p;
             this.CheckoutTextArea.setLineWrap(true);
-            this.CheckoutTextArea.setText("Product ID: " + p.getProductID() + "\n" + "Product name: " + p.getProductName() + "\n" + "Product price: R" + p.getProductPrice() + "\n" + "Product description: " + p.getProductDescription());
+            this.CheckoutTextArea.setText("Product ID: " + p.getProductID() + "\n" + "Product name: " + p.getProductName() + "\n" + "Product price: R" + p.getProductPrice() + "\n" + "Product description: " + p.getProductDescription() + "\n" + "____________________________" + "\n");
             this.CheckoutTextArea.setEditable(false);
-        } else if (b != null) {
+        }
+        if (b != null) {
             this.OrderedBooks = b;
             this.CheckoutTextArea.setLineWrap(true);
-            this.CheckoutTextArea.setText("Book ID: " + b.getBookID() + "\n" + "Book name: " + b.getBookName() + "\n" + "Book price: R" + b.getBookPrice() + "\n" + "Book description: " + b.getBookDiscription());
+            this.CheckoutTextArea.setText("Book ID: " + b.getBookID() + "\n" + "Book name: " + b.getBookName() + "\n" + "Book price: R" + b.getBookPrice() + "\n" + "Book description: " + b.getBookDiscription() + "\n" + "____________________________" + "\n");
             this.CheckoutTextArea.setEditable(false);
-        } else if (d != null) {
+        }
+        if (d != null) {
             this.OrderedDigitalItems = d;
             this.CheckoutTextArea.setLineWrap(true);
-            this.CheckoutTextArea.setText("Digital Item ID: " + d.getDigitalItemID() + "\n" + "Digital Item name: " + d.getDigitalItemName() + "\n" + "Digital Item price: R" + d.getDigitalItemPrice() + "\n" + "Digital Item description: " + d.getDigitalItemDescription());
+            this.CheckoutTextArea.setText("Digital Item ID: " + d.getDigitalItemID() + "\n" + "Digital Item name: " + d.getDigitalItemName() + "\n" + "Digital Item price: R" + d.getDigitalItemPrice() + "\n" + "Digital Item description: " + d.getDigitalItemDescription() + "\n" + "____________________________" + "\n");
             this.CheckoutTextArea.setEditable(false);
         }
 
@@ -59,6 +59,11 @@ public class CheckoutScreen extends javax.swing.JFrame {
         CheckoutButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
         jPanel1.setLayout(null);
@@ -86,7 +91,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
         CheckoutConfirmCheckBox.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         CheckoutConfirmCheckBox.setText("Confirm Checkout?");
         jPanel3.add(CheckoutConfirmCheckBox);
-        CheckoutConfirmCheckBox.setBounds(470, 10, 170, 25);
+        CheckoutConfirmCheckBox.setBounds(470, 10, 170, 24);
 
         CheckoutButton.setBackground(new java.awt.Color(0, 255, 255));
         CheckoutButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -133,6 +138,11 @@ public class CheckoutScreen extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CheckoutButtonMouseClicked
 
+    public boolean formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        System.out.println("Window opened");
+        return true;
+    }//GEN-LAST:event_formWindowOpened
+
     /**
      * @param args the command line arguments
      */
@@ -165,8 +175,6 @@ public class CheckoutScreen extends javax.swing.JFrame {
             public void run() {
                 CheckoutScreen scr = new CheckoutScreen(null, null, null);
                 scr.setVisible(true);
-                scr.setLocationRelativeTo(null);
-
             }
         });
     }
@@ -181,4 +189,6 @@ public class CheckoutScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+
 }

@@ -25,9 +25,12 @@ import javax.swing.ImageIcon;
 import Model.Products;
 import Model.Books;
 import Model.DigitalItems;
+import java.awt.Container;
 import java.awt.Font;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -699,11 +702,20 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_DigitalItemButton4MouseClicked
 
     public String BuyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuyButtonMouseClicked
-        String Orders = this.InternalProductText.getText();
         CheckoutScreen scrn = new CheckoutScreen(this.CurrentProduct, this.CurrentDigitalItems, this.CurtrentBooks);
-        scrn.setVisible(true);
-        scrn.setLocationRelativeTo(null);
-
+        String Orders = "";
+        boolean isShowing = scrn.isShowing();
+        if (this.InternalProductText.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "Please select a product!");
+            return "Nothing";
+        }
+        if (isShowing == true) {
+            return "Nothing";
+        } else if (isShowing == false){
+            scrn.setVisible(true);
+            scrn.setLocationRelativeTo(null);
+        }
+        
         return Orders;
     }//GEN-LAST:event_BuyButtonMouseClicked
 
