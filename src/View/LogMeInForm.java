@@ -6,6 +6,9 @@
  */
 package View;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -129,7 +132,7 @@ public class LogMeInForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void UsernameLogInTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameLogInTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_UsernameLogInTextActionPerformed
@@ -139,7 +142,6 @@ public class LogMeInForm extends javax.swing.JFrame {
     }//GEN-LAST:event_LogInCancelButtonActionPerformed
 
     private void LogInConfrimButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInConfrimButtonMouseClicked
-        LogMeInForm MyLogin = new LogMeInForm();
         File file = new File("LoginDetails.txt");
         boolean UsernameFound = false;
         boolean PasswordFound = false;
@@ -201,7 +203,9 @@ public class LogMeInForm extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_CreateAccLabelClickableMouseClicked
-
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -252,4 +256,5 @@ public class LogMeInForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
 }

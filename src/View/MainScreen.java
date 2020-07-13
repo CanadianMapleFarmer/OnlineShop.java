@@ -714,8 +714,9 @@ public class MainScreen extends javax.swing.JFrame {
         } else if (isShowing == false){
             scrn.setVisible(true);
             scrn.setLocationRelativeTo(null);
+            this.dispose();
+            return "Done";
         }
-        
         return Orders;
     }//GEN-LAST:event_BuyButtonMouseClicked
 

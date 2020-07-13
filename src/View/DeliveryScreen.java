@@ -6,6 +6,11 @@
  */
 package View;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 public class DeliveryScreen extends javax.swing.JFrame {
@@ -102,17 +107,19 @@ public class DeliveryScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    @SuppressWarnings("SleepWhileInLoop")
     private void DeliveryStartButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeliveryStartButtonMouseClicked
-
-        for (int i = 0; i <= 100; i++) {
-            try {
-                Thread.sleep(100);
-                this.DeliveryProgressPercentage.setText(i + "%");
-                this.DeliveryProgressBar.setValue(i);
-
-            } catch (Exception e) {
+        final Timer t = new Timer(50, (ActionEvent e) -> {
+            DeliveryProgressBar.setValue(DeliveryProgressBar.getValue() + 1);
+            DeliveryProgressPercentage.setText(String.valueOf(DeliveryProgressBar.getValue()) + "%");
+            if (DeliveryProgressBar.getValue() == 100) {
+                ((Timer) e.getSource()).stop();
+                JOptionPane.showMessageDialog(rootPane, "Your item has been delivered!");
+                this.dispose();
             }
-        }
+        });
+    t.start();
+    return;
     }//GEN-LAST:event_DeliveryStartButtonMouseClicked
 
     /**
