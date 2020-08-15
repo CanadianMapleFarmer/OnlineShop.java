@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -77,6 +78,12 @@ public class LogMeInForm extends javax.swing.JFrame {
         });
         jPanel2.add(UsernameLogInText);
         UsernameLogInText.setBounds(220, 80, 310, 30);
+
+        PasswordLogInText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                PasswordLogInTextKeyPressed(evt);
+            }
+        });
         jPanel2.add(PasswordLogInText);
         PasswordLogInText.setBounds(220, 150, 310, 30);
 
@@ -95,6 +102,11 @@ public class LogMeInForm extends javax.swing.JFrame {
         LogInConfrimButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LogInConfrimButtonMouseClicked(evt);
+            }
+        });
+        LogInConfrimButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LogInConfrimButtonKeyPressed(evt);
             }
         });
         jPanel2.add(LogInConfrimButton);
@@ -140,7 +152,7 @@ public class LogMeInForm extends javax.swing.JFrame {
     private void LogInCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInCancelButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_LogInCancelButtonActionPerformed
-
+    
     private void LogInConfrimButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInConfrimButtonMouseClicked
         File file = new File("LoginDetails.txt");
         boolean UsernameFound = false;
@@ -203,6 +215,116 @@ public class LogMeInForm extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_CreateAccLabelClickableMouseClicked
+
+    private void LogInConfrimButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LogInConfrimButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            File file = new File("LoginDetails.txt");
+        boolean UsernameFound = false;
+        boolean PasswordFound = false;
+        String username = this.UsernameLogInText.getText();
+        String password = new String(this.PasswordLogInText.getPassword());
+        String tempUsername;
+        String tempPassword;
+        String Line;
+        if (this.UsernameLogInText.getText().isEmpty() == true || this.PasswordLogInText.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Please fill in you Username/Password in the fields!");
+            this.UsernameLogInText.setText("");
+            this.PasswordLogInText.setText("");
+            return;
+        }
+        try {
+            Scanner scFile = new Scanner(file);
+            while (scFile.hasNext()) {
+                Line = scFile.nextLine();
+                Scanner inLine = new Scanner(Line).useDelimiter("#");
+                tempUsername = inLine.next();
+                tempPassword = inLine.next();
+            
+                if (username.compareTo(tempUsername) == 0) {
+                    UsernameFound = true;
+                }
+                if (password.compareTo(tempPassword) == 0) {
+                    PasswordFound = true;
+                }
+            }
+            if (!UsernameFound) {
+                JOptionPane.showMessageDialog(rootPane, "Username is invalid!");
+                this.UsernameLogInText.setText("");
+                return;
+            } 
+            if (!PasswordFound) {
+                JOptionPane.showMessageDialog(rootPane, "Password is invalid!");
+                this.PasswordLogInText.setText("");
+                return;
+            }
+            if (UsernameFound && PasswordFound) {
+                JOptionPane.showMessageDialog(rootPane, "You have succesfully logged in!");
+                MainScreen Screen = new MainScreen();
+                Screen.setVisible(true);
+                Screen.setLocationRelativeTo(null);
+                this.dispose();
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!!!" + e);
+        }
+        }
+    }//GEN-LAST:event_LogInConfrimButtonKeyPressed
+
+    private void PasswordLogInTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordLogInTextKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            File file = new File("LoginDetails.txt");
+        boolean UsernameFound = false;
+        boolean PasswordFound = false;
+        String username = this.UsernameLogInText.getText();
+        String password = new String(this.PasswordLogInText.getPassword());
+        String tempUsername;
+        String tempPassword;
+        String Line;
+        if (this.UsernameLogInText.getText().isEmpty() == true || this.PasswordLogInText.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Please fill in you Username/Password in the fields!");
+            this.UsernameLogInText.setText("");
+            this.PasswordLogInText.setText("");
+            return;
+        }
+        try {
+            Scanner scFile = new Scanner(file);
+            while (scFile.hasNext()) {
+                Line = scFile.nextLine();
+                Scanner inLine = new Scanner(Line).useDelimiter("#");
+                tempUsername = inLine.next();
+                tempPassword = inLine.next();
+            
+                if (username.compareTo(tempUsername) == 0) {
+                    UsernameFound = true;
+                }
+                if (password.compareTo(tempPassword) == 0) {
+                    PasswordFound = true;
+                }
+            }
+            if (!UsernameFound) {
+                JOptionPane.showMessageDialog(rootPane, "Username is invalid!");
+                this.UsernameLogInText.setText("");
+                return;
+            } 
+            if (!PasswordFound) {
+                JOptionPane.showMessageDialog(rootPane, "Password is invalid!");
+                this.PasswordLogInText.setText("");
+                return;
+            }
+            if (UsernameFound && PasswordFound) {
+                JOptionPane.showMessageDialog(rootPane, "You have succesfully logged in!");
+                MainScreen Screen = new MainScreen();
+                Screen.setVisible(true);
+                Screen.setLocationRelativeTo(null);
+                this.dispose();
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!!!" + e);
+        }
+        }
+    }//GEN-LAST:event_PasswordLogInTextKeyPressed
     
     
     

@@ -6,6 +6,7 @@
  */
 package View;
 
+import java.awt.event.KeyEvent;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
@@ -76,6 +77,12 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         jLabel4.setBounds(40, 240, 170, 30);
         jPanel2.add(AccCreatePassword);
         AccCreatePassword.setBounds(280, 170, 280, 30);
+
+        AccCreatePassConfirm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                AccCreatePassConfirmKeyPressed(evt);
+            }
+        });
         jPanel2.add(AccCreatePassConfirm);
         AccCreatePassConfirm.setBounds(280, 230, 280, 30);
         jPanel2.add(AccCreateUsername);
@@ -86,6 +93,11 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         AccCreateButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AccCreateButtonMouseClicked(evt);
+            }
+        });
+        AccCreateButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                AccCreateButtonKeyPressed(evt);
             }
         });
         jPanel2.add(AccCreateButton);
@@ -148,6 +160,88 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_AccCreateButtonMouseClicked
+
+    private void AccCreateButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreateButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
+        String UserName = AccCreateUsername.getText();
+        String Password = new String(AccCreatePassword.getPassword());
+        String PassConfirm = new String(AccCreatePassConfirm.getPassword());
+        boolean found = false;
+        boolean confirmPassword = false;
+        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0){
+            JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
+            return;
+        }
+        try {
+            if (Password.compareTo(PassConfirm) == 0) {
+                try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
+                    fw.write(UserName + "#" + Password + "\n");
+                    found = true;
+                    confirmPassword = true;
+                }
+            }
+            if (confirmPassword == false){
+                JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
+                this.AccCreatePassConfirm.setText("");
+                return;
+            }
+            if (found && confirmPassword) {
+                JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
+                Acc.setVisible(false);
+                JOptionPane.showMessageDialog(rootPane, "Please login again.");
+                LogMeInForm login = new LogMeInForm();
+                login.setVisible(true);
+                login.setLocationRelativeTo(null);
+                this.dispose();
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
+    }//GEN-LAST:event_AccCreateButtonKeyPressed
+
+    private void AccCreatePassConfirmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreatePassConfirmKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
+        String UserName = AccCreateUsername.getText();
+        String Password = new String(AccCreatePassword.getPassword());
+        String PassConfirm = new String(AccCreatePassConfirm.getPassword());
+        boolean found = false;
+        boolean confirmPassword = false;
+        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0){
+            JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
+            return;
+        }
+        try {
+            if (Password.compareTo(PassConfirm) == 0) {
+                try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
+                    fw.write(UserName + "#" + Password + "\n");
+                    found = true;
+                    confirmPassword = true;
+                }
+            }
+            if (confirmPassword == false){
+                JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
+                this.AccCreatePassConfirm.setText("");
+                return;
+            }
+            if (found && confirmPassword) {
+                JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
+                Acc.setVisible(false);
+                JOptionPane.showMessageDialog(rootPane, "Please login again.");
+                LogMeInForm login = new LogMeInForm();
+                login.setVisible(true);
+                login.setLocationRelativeTo(null);
+                this.dispose();
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
+    }//GEN-LAST:event_AccCreatePassConfirmKeyPressed
 
     /**
      * @param args the command line arguments
