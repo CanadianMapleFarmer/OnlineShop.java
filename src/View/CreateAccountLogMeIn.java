@@ -75,6 +75,12 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         jLabel4.setText("Confirm Password:");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(40, 240, 170, 30);
+
+        AccCreatePassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                AccCreatePasswordKeyPressed(evt);
+            }
+        });
         jPanel2.add(AccCreatePassword);
         AccCreatePassword.setBounds(280, 170, 280, 30);
 
@@ -85,6 +91,12 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         });
         jPanel2.add(AccCreatePassConfirm);
         AccCreatePassConfirm.setBounds(280, 230, 280, 30);
+
+        AccCreateUsername.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                AccCreateUsernameKeyPressed(evt);
+            }
+        });
         jPanel2.add(AccCreateUsername);
         AccCreateUsername.setBounds(280, 110, 280, 30);
 
@@ -241,7 +253,22 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
             Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
         }
         }
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password.");
+        }
     }//GEN-LAST:event_AccCreatePassConfirmKeyPressed
+
+    private void AccCreateUsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreateUsernameKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password");
+        }
+    }//GEN-LAST:event_AccCreateUsernameKeyPressed
+
+    private void AccCreatePasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreatePasswordKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password");
+        }
+    }//GEN-LAST:event_AccCreatePasswordKeyPressed
 
     /**
      * @param args the command line arguments

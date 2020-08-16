@@ -79,6 +79,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
 
         CheckoutTextArea.setColumns(20);
         CheckoutTextArea.setRows(5);
+        CheckoutTextArea.setToolTipText("Checkout product info.");
         jScrollPane1.setViewportView(CheckoutTextArea);
 
         jPanel2.add(jScrollPane1);
@@ -90,6 +91,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
         CheckoutConfirmCheckBox.setBackground(new java.awt.Color(0, 153, 255));
         CheckoutConfirmCheckBox.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         CheckoutConfirmCheckBox.setText("Confirm Checkout?");
+        CheckoutConfirmCheckBox.setToolTipText("Checkout confirm.");
         jPanel3.add(CheckoutConfirmCheckBox);
         CheckoutConfirmCheckBox.setBounds(470, 10, 170, 24);
 
@@ -97,6 +99,7 @@ public class CheckoutScreen extends javax.swing.JFrame {
         CheckoutButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         CheckoutButton.setForeground(new java.awt.Color(0, 51, 255));
         CheckoutButton.setText("Checkout");
+        CheckoutButton.setToolTipText("Checkout button,");
         CheckoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CheckoutButtonMouseClicked(evt);

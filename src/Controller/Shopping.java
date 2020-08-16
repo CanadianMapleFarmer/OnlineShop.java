@@ -1,4 +1,4 @@
-//Gerhard Kloppers
+
 package Controller;
 
 import Model.Products;
@@ -7,9 +7,23 @@ import Model.DigitalItems;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+* The Shopping class is the controller class of the project.
+* Shopping class is used to retrieve data from persistent storage (.txt) and assign that data to the objects in the model package.
+*
+* @author Gerhard Kloppers
+* @version 1.15.0 8/12/2020
+* @see java.lang.System
+**/
 public class Shopping {
-
+/**
+ * Shopping class uses ArrayList<> to make an Array to allow storage of scanned data.
+ * This data is added using Arr.add and adding that data through params to object characteristics using constructor.
+ * 
+ * @param args Constructor in object classes.
+ * @return Data from persistent storage, and assigns to object characteristics.
+ * 
+**/
     int counter = 0;
     ArrayList<Products> ProductArr = new ArrayList<>();
 //  ArrayList created too store data read by scanner from .txt file

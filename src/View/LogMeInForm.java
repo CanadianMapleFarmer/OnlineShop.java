@@ -71,14 +71,21 @@ public class LogMeInForm extends javax.swing.JFrame {
         jPanel2.add(UsernameLabel);
         UsernameLabel.setBounds(70, 80, 140, 29);
 
+        UsernameLogInText.setToolTipText("Please enter you Username.");
         UsernameLogInText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsernameLogInTextActionPerformed(evt);
             }
         });
+        UsernameLogInText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                UsernameLogInTextKeyPressed(evt);
+            }
+        });
         jPanel2.add(UsernameLogInText);
         UsernameLogInText.setBounds(220, 80, 310, 30);
 
+        PasswordLogInText.setToolTipText("Please enter you Password.");
         PasswordLogInText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 PasswordLogInTextKeyPressed(evt);
@@ -269,6 +276,9 @@ public class LogMeInForm extends javax.swing.JFrame {
             System.out.println("File not found!!!" + e);
         }
         }
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Login screen.\n• Please enter you Username and Password.\n• If you don't have an account please create one.");
+        }
     }//GEN-LAST:event_LogInConfrimButtonKeyPressed
 
     private void PasswordLogInTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordLogInTextKeyPressed
@@ -324,7 +334,16 @@ public class LogMeInForm extends javax.swing.JFrame {
             System.out.println("File not found!!!" + e);
         }
         }
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Login screen.\n• Please enter you Username and Password.\n• If you don't have an account please create one.");
+        }
     }//GEN-LAST:event_PasswordLogInTextKeyPressed
+
+    private void UsernameLogInTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsernameLogInTextKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Login screen.\n• Please enter you Username and Password.\n• If you don't have an account please create one.");
+        }
+    }//GEN-LAST:event_UsernameLogInTextKeyPressed
     
     
     
@@ -364,6 +383,7 @@ public class LogMeInForm extends javax.swing.JFrame {
 
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -378,5 +398,4 @@ public class LogMeInForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
-
 }

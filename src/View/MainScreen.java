@@ -1,16 +1,7 @@
 //Gerhard Kloppers
 package View;
 
-import Controller.Shopping;
-import java.util.HashSet;
-import javax.swing.ImageIcon;
-import Model.Products;
-import Model.Books;
-import Model.DigitalItems;
-import java.awt.Font;
 import java.awt.HeadlessException;
-import java.util.ArrayList;
-import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -18,26 +9,25 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import Controller.Shopping;
-import java.util.HashSet;
-import javax.swing.ImageIcon;
 import Model.Products;
 import Model.Books;
 import Model.DigitalItems;
-import java.awt.Container;
 import java.awt.Font;
-import java.awt.event.WindowEvent;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+
 
 /**
  *
- * @author Klopp
+ * @author Gerhard Kloppers
+ * @version 1.15.0 8/15/2020
+ * @see java.lang.System
  */
 public class MainScreen extends javax.swing.JFrame {
+/**
+ * 
+**/
 
     Shopping MyShop = new Shopping();
     Books CurtrentBooks = null;
@@ -96,6 +86,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     public MainScreen() {
         initComponents();
+        this.InternalProductText.setEditable(false);
     }
 
     /**
@@ -170,6 +161,11 @@ public class MainScreen extends javax.swing.JFrame {
         setBackground(new java.awt.Color(51, 204, 255));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPanel4KeyPressed(evt);
+            }
+        });
 
         DgitalItemsTab.setBackground(new java.awt.Color(0, 153, 255));
         DgitalItemsTab.setBorder(new javax.swing.border.MatteBorder(null));
@@ -185,6 +181,7 @@ public class MainScreen extends javax.swing.JFrame {
         ProductPanel1.add(jLabel2);
         jLabel2.setBounds(70, 50, 110, 113);
 
+        ProductButton1.setToolTipText("Product.");
         ProductButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProductButton1MouseClicked(evt);
@@ -199,6 +196,7 @@ public class MainScreen extends javax.swing.JFrame {
         ProductPanel2.add(jLabel3);
         jLabel3.setBounds(70, 50, 113, 110);
 
+        ProductButton2.setToolTipText("Product.");
         ProductButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProductButton2MouseClicked(evt);
@@ -213,6 +211,7 @@ public class MainScreen extends javax.swing.JFrame {
         ProductPanel3.add(jLabel4);
         jLabel4.setBounds(70, 50, 113, 100);
 
+        ProductButton3.setToolTipText("Product.");
         ProductButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProductButton3MouseClicked(evt);
@@ -227,6 +226,7 @@ public class MainScreen extends javax.swing.JFrame {
         ProductPanel4.add(jLabel5);
         jLabel5.setBounds(60, 40, 120, 120);
 
+        ProductButton4.setToolTipText("Product.");
         ProductButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProductButton4MouseClicked(evt);
@@ -272,6 +272,7 @@ public class MainScreen extends javax.swing.JFrame {
         BookPanel1.add(jLabel6);
         jLabel6.setBounds(60, 10, 130, 190);
 
+        BookButton1.setToolTipText("Product.");
         BookButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BookButton1MouseClicked(evt);
@@ -286,6 +287,7 @@ public class MainScreen extends javax.swing.JFrame {
         BookPanel2.add(jLabel7);
         jLabel7.setBounds(50, 10, 140, 190);
 
+        BookButton2.setToolTipText("Product.");
         BookButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BookButton2MouseClicked(evt);
@@ -300,6 +302,7 @@ public class MainScreen extends javax.swing.JFrame {
         BookPanel3.add(jLabel8);
         jLabel8.setBounds(60, 10, 130, 190);
 
+        BookButton3.setToolTipText("Product.");
         BookButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BookButton3MouseClicked(evt);
@@ -314,6 +317,7 @@ public class MainScreen extends javax.swing.JFrame {
         BookPanel4.add(jLabel9);
         jLabel9.setBounds(60, 10, 130, 190);
 
+        BookButton4.setToolTipText("Product.");
         BookButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BookButton4MouseClicked(evt);
@@ -359,6 +363,7 @@ public class MainScreen extends javax.swing.JFrame {
         DigitalItemPanel1.add(jLabel10);
         jLabel10.setBounds(20, 20, 200, 150);
 
+        DigitalItemButton1.setToolTipText("Product.");
         DigitalItemButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DigitalItemButton1MouseClicked(evt);
@@ -373,6 +378,7 @@ public class MainScreen extends javax.swing.JFrame {
         DigitalItemPanel2.add(jLabel11);
         jLabel11.setBounds(40, 20, 160, 150);
 
+        DigitalItemButton2.setToolTipText("Product.");
         DigitalItemButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DigitalItemButton2MouseClicked(evt);
@@ -387,6 +393,7 @@ public class MainScreen extends javax.swing.JFrame {
         DigitalItemPanel3.add(jLabel12);
         jLabel12.setBounds(50, 40, 150, 120);
 
+        DigitalItemButton3.setToolTipText("Product.");
         DigitalItemButton3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 DigitalItemButton3MouseDragged(evt);
@@ -401,6 +408,7 @@ public class MainScreen extends javax.swing.JFrame {
         DigitalItemPanel4.add(jLabel13);
         jLabel13.setBounds(50, 40, 140, 120);
 
+        DigitalItemButton4.setToolTipText("Product.");
         DigitalItemButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DigitalItemButton4MouseClicked(evt);
@@ -447,6 +455,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         InternalProductText.setColumns(20);
         InternalProductText.setRows(5);
+        InternalProductText.setToolTipText("The product information panel.");
         InternalScrollPane.setViewportView(InternalProductText);
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
@@ -470,6 +479,7 @@ public class MainScreen extends javax.swing.JFrame {
         BuyButton.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         BuyButton.setForeground(new java.awt.Color(0, 51, 255));
         BuyButton.setText("Buy");
+        BuyButton.setToolTipText("Buy button.");
         BuyButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BuyButtonMouseClicked(evt);
@@ -541,7 +551,6 @@ public class MainScreen extends javax.swing.JFrame {
 
         return Producttxt1;
     }//GEN-LAST:event_ProductButton1MouseClicked
-
 
     public void ProductButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButton2MouseClicked
         int productNum = 1;
@@ -720,6 +729,12 @@ public class MainScreen extends javax.swing.JFrame {
         return Orders;
     }//GEN-LAST:event_BuyButtonMouseClicked
 
+    private void jPanel4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel4KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+           JOptionPane.showMessageDialog(rootPane, "• This is the Shopping Screen.\n• Please select a product from the list and tabs.\n• Check the details in the prompt below the products.\n• Press buy to buy the product.\n• Make sure the proudct in the prompt matches the product you selected.");
+        }
+    }//GEN-LAST:event_jPanel4KeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -751,7 +766,6 @@ public class MainScreen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainScreen().setVisible(true);
-
             }
         });
     }

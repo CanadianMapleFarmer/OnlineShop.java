@@ -1,8 +1,18 @@
-//Gerhard Kloppers
 package Model;
-
+/**
+ * This is the Books Model Object that has characteristics and stores all the data read from persistent storage.
+ * This Object is called and the data is extracted in the MainScreen.java
+ * 
+ * @author Gerhard Kloppers
+ * @version 1.15.0
+ * @see java.lang.System
+**/
 public class Books {
-
+/**
+ * The book class has characteristics and a constructor used to assign those characteristics.
+ * @params args (The book characteristics. These are used to assign the values.)
+ * @returns (returns a constructor that holds data arrays)
+**/
     private String BookID;
     private String BookName;
     private int BookPrice;

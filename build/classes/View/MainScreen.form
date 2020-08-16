@@ -59,6 +59,9 @@
           <Color blue="33" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jPanel4KeyPressed"/>
+      </Events>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -193,6 +196,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="ProductButton1">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ProductButton1MouseClicked"/>
                       </Events>
@@ -223,6 +229,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="ProductButton2">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ProductButton2MouseClicked"/>
                       </Events>
@@ -253,6 +262,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="ProductButton3">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ProductButton3MouseClicked"/>
                       </Events>
@@ -283,6 +295,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="ProductButton4">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ProductButton4MouseClicked"/>
                       </Events>
@@ -361,6 +376,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="BookButton1">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BookButton1MouseClicked"/>
                       </Events>
@@ -391,6 +409,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="BookButton2">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BookButton2MouseClicked"/>
                       </Events>
@@ -421,6 +442,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="BookButton3">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BookButton3MouseClicked"/>
                       </Events>
@@ -451,6 +475,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="BookButton4">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BookButton4MouseClicked"/>
                       </Events>
@@ -529,6 +556,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="DigitalItemButton1">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DigitalItemButton1MouseClicked"/>
                       </Events>
@@ -559,6 +589,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="DigitalItemButton2">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DigitalItemButton2MouseClicked"/>
                       </Events>
@@ -589,6 +622,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="DigitalItemButton3">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="DigitalItemButton3MouseDragged"/>
                       </Events>
@@ -619,6 +655,9 @@
                       </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="DigitalItemButton4">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" value="Product."/>
+                      </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DigitalItemButton4MouseClicked"/>
                       </Events>
@@ -685,6 +724,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="toolTipText" type="java.lang.String" value="The product information panel."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -703,6 +743,7 @@
               <Color blue="ff" green="33" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Buy"/>
+            <Property name="toolTipText" type="java.lang.String" value="Buy button."/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuyButtonMouseClicked"/>
