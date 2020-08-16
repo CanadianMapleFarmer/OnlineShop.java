@@ -145,6 +145,7 @@ public class MainScreen extends javax.swing.JFrame {
         InternalScrollPane = new javax.swing.JScrollPane();
         InternalProductText = new javax.swing.JTextArea();
         BuyButton = new javax.swing.JButton();
+        HelpButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -161,11 +162,6 @@ public class MainScreen extends javax.swing.JFrame {
         setBackground(new java.awt.Color(51, 204, 255));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 51));
-        jPanel4.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jPanel4KeyPressed(evt);
-            }
-        });
 
         DgitalItemsTab.setBackground(new java.awt.Color(0, 153, 255));
         DgitalItemsTab.setBorder(new javax.swing.border.MatteBorder(null));
@@ -486,6 +482,20 @@ public class MainScreen extends javax.swing.JFrame {
             }
         });
 
+        HelpButton.setBackground(new java.awt.Color(0, 255, 204));
+        HelpButton.setForeground(new java.awt.Color(0, 0, 0));
+        HelpButton.setText("HELP");
+        HelpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HelpButtonMouseClicked(evt);
+            }
+        });
+        HelpButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                HelpButtonKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -496,21 +506,26 @@ public class MainScreen extends javax.swing.JFrame {
                         .addGap(19, 19, 19)
                         .addComponent(DgitalItemsTab, javax.swing.GroupLayout.PREFERRED_SIZE, 1084, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(488, 488, 488)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(437, 437, 437)
                         .addComponent(BuyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(21, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(488, 488, 488)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(HelpButton)
+                .addGap(31, 31, 31))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(HelpButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DgitalItemsTab, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -729,11 +744,15 @@ public class MainScreen extends javax.swing.JFrame {
         return Orders;
     }//GEN-LAST:event_BuyButtonMouseClicked
 
-    private void jPanel4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel4KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_F1) {
-           JOptionPane.showMessageDialog(rootPane, "• This is the Shopping Screen.\n• Please select a product from the list and tabs.\n• Check the details in the prompt below the products.\n• Press buy to buy the product.\n• Make sure the proudct in the prompt matches the product you selected.");
+    private void HelpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpButtonMouseClicked
+        JOptionPane.showMessageDialog(rootPane, "• This is the Shopping Screen.\n• Please select a product from the list and tabs.\n• Check the details in the prompt below the products.\n• Press buy to buy the product.\n• Make sure the proudct in the prompt matches the product you selected.");
+    }//GEN-LAST:event_HelpButtonMouseClicked
+
+    private void HelpButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_HelpButtonKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_F1){
+           JOptionPane.showMessageDialog(rootPane, "• This is the Shopping Screen.\n• Please select a product from the list and tabs.\n• Check the details in the prompt below the products.\n• Press buy to buy the product.\n• Make sure the proudct in the prompt matches the product you selected."); 
         }
-    }//GEN-LAST:event_jPanel4KeyPressed
+    }//GEN-LAST:event_HelpButtonKeyPressed
 
     /**
      * @param args the command line arguments
@@ -789,6 +808,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JPanel DigitalItemPanel2;
     private javax.swing.JPanel DigitalItemPanel3;
     private javax.swing.JPanel DigitalItemPanel4;
+    private javax.swing.JButton HelpButton;
     private javax.swing.JTextArea InternalProductText;
     private javax.swing.JScrollPane InternalScrollPane;
     private javax.swing.JButton ProductButton1;
