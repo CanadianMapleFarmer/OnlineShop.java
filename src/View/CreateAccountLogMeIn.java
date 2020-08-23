@@ -186,6 +186,17 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
             return;
         }
         try {
+            if (UserName.length() > 50){
+                JOptionPane.showMessageDialog(rootPane, "Your username is too long!");
+                this.AccCreateUsername.setText("");
+                return;
+            }
+            if (Password.length() > 50){
+                JOptionPane.showMessageDialog(rootPane, "Your password is too long!");
+                this.AccCreatePassword.setText("");
+                this.AccCreatePassConfirm.setText("");
+                return;
+            }
             if (Password.compareTo(PassConfirm) == 0) {
                 try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
                     fw.write(UserName + "#" + Password + "\n");
