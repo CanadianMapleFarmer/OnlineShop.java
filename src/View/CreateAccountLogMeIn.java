@@ -140,7 +140,14 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
         String PassConfirm = new String(AccCreatePassConfirm.getPassword());
         boolean found = false;
         boolean confirmPassword = false;
-        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0){
+        if (UserName.length() > 50 || Password.length() > 50) {
+                JOptionPane.showMessageDialog(rootPane, "Your username and/or passowrd is too long!");
+                this.AccCreatePassword.setText("");
+                this.AccCreatePassConfirm.setText("");
+                this.AccCreateUsername.setText("");
+                return;
+            }
+        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0) {
             JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
             return;
         }
@@ -152,7 +159,7 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
                     confirmPassword = true;
                 }
             }
-            if (confirmPassword == false){
+            if (confirmPassword == false) {
                 JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
                 this.AccCreatePassConfirm.setText("");
                 return;
@@ -176,108 +183,112 @@ public class CreateAccountLogMeIn extends javax.swing.JFrame {
     private void AccCreateButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreateButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
-        String UserName = AccCreateUsername.getText();
-        String Password = new String(AccCreatePassword.getPassword());
-        String PassConfirm = new String(AccCreatePassConfirm.getPassword());
-        boolean found = false;
-        boolean confirmPassword = false;
-        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0){
-            JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
-            return;
-        }
-        try {
-            if (UserName.length() > 50){
-                JOptionPane.showMessageDialog(rootPane, "Your username is too long!");
+            String UserName = AccCreateUsername.getText();
+            String Password = new String(AccCreatePassword.getPassword());
+            String PassConfirm = new String(AccCreatePassConfirm.getPassword());
+            boolean found = false;
+            boolean confirmPassword = false;
+            System.out.println(UserName + "\n" + Password);
+            if (UserName.length() > 50 || Password.length() > 50) {
+                JOptionPane.showMessageDialog(rootPane, "Your username and/or passowrd is too long!");
+                this.AccCreatePassword.setText("");
+                this.AccCreatePassConfirm.setText("");
                 this.AccCreateUsername.setText("");
                 return;
             }
-            if (Password.length() > 50){
-                JOptionPane.showMessageDialog(rootPane, "Your password is too long!");
-                this.AccCreatePassword.setText("");
-                this.AccCreatePassConfirm.setText("");
+            if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0) {
+                JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
                 return;
             }
-            if (Password.compareTo(PassConfirm) == 0) {
-                try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
-                    fw.write(UserName + "#" + Password + "\n");
-                    found = true;
-                    confirmPassword = true;
+            try {
+                if (Password.compareTo(PassConfirm) == 0) {
+                    try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
+                        fw.write(UserName + "#" + Password + "\n");
+                        found = true;
+                        confirmPassword = true;
+                    }
                 }
-            }
-            if (confirmPassword == false){
-                JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
-                this.AccCreatePassConfirm.setText("");
-                return;
-            }
-            if (found && confirmPassword) {
-                JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
-                Acc.setVisible(false);
-                JOptionPane.showMessageDialog(rootPane, "Please login again.");
-                LogMeInForm login = new LogMeInForm();
-                login.setVisible(true);
-                login.setLocationRelativeTo(null);
-                this.dispose();
-            }
+                if (confirmPassword == false) {
+                    JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
+                    this.AccCreatePassConfirm.setText("");
+                    return;
+                }
+                if (found && confirmPassword) {
+                    JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
+                    Acc.setVisible(false);
+                    JOptionPane.showMessageDialog(rootPane, "Please login again.");
+                    LogMeInForm login = new LogMeInForm();
+                    login.setVisible(true);
+                    login.setLocationRelativeTo(null);
+                    this.dispose();
+                }
 
-        } catch (IOException ex) {
-            Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            } catch (IOException ex) {
+                Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_AccCreateButtonKeyPressed
 
     private void AccCreatePassConfirmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreatePassConfirmKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             CreateAccountLogMeIn Acc = new CreateAccountLogMeIn();
-        String UserName = AccCreateUsername.getText();
-        String Password = new String(AccCreatePassword.getPassword());
-        String PassConfirm = new String(AccCreatePassConfirm.getPassword());
-        boolean found = false;
-        boolean confirmPassword = false;
-        if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0){
-            JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
-            return;
-        }
-        try {
-            if (Password.compareTo(PassConfirm) == 0) {
-                try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
-                    fw.write(UserName + "#" + Password + "\n");
-                    found = true;
-                    confirmPassword = true;
-                }
-            }
-            if (confirmPassword == false){
-                JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
+            String UserName = AccCreateUsername.getText();
+            String Password = new String(AccCreatePassword.getPassword());
+            String PassConfirm = new String(AccCreatePassConfirm.getPassword());
+            boolean found = false;
+            boolean confirmPassword = false;
+            if (UserName.length() > 50 || Password.length() > 50) {
+                JOptionPane.showMessageDialog(rootPane, "Your username and/or passowrd is too long!");
+                this.AccCreatePassword.setText("");
                 this.AccCreatePassConfirm.setText("");
+                this.AccCreateUsername.setText("");
                 return;
             }
-            if (found && confirmPassword) {
-                JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
-                Acc.setVisible(false);
-                JOptionPane.showMessageDialog(rootPane, "Please login again.");
-                LogMeInForm login = new LogMeInForm();
-                login.setVisible(true);
-                login.setLocationRelativeTo(null);
-                this.dispose();
+            if (this.AccCreateUsername.getText().isEmpty() || this.AccCreatePassword.getPassword().length == 0 || this.AccCreatePassConfirm.getPassword().length == 0) {
+                JOptionPane.showMessageDialog(rootPane, "Please fill in the required fields!");
+                return;
             }
+            try {
+                if (Password.compareTo(PassConfirm) == 0) {
+                    try (FileWriter fw = new FileWriter("LoginDetails.txt", true)) {
+                        fw.write(UserName + "#" + Password + "\n");
+                        found = true;
+                        confirmPassword = true;
+                    }
+                }
+                if (confirmPassword == false) {
+                    JOptionPane.showMessageDialog(rootPane, "Confirm password does not match!");
+                    this.AccCreatePassConfirm.setText("");
+                    return;
+                }
+                if (found && confirmPassword) {
+                    JOptionPane.showMessageDialog(rootPane, "You have succesfully created an account!");
+                    Acc.setVisible(false);
+                    JOptionPane.showMessageDialog(rootPane, "Please login again.");
+                    LogMeInForm login = new LogMeInForm();
+                    login.setVisible(true);
+                    login.setLocationRelativeTo(null);
+                    this.dispose();
+                }
 
-        } catch (IOException ex) {
-            Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            } catch (IOException ex) {
+                Logger.getLogger(CreateAccountLogMeIn.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (evt.getKeyCode() == KeyEvent.VK_F1) {
-           JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password.");
+            JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password.");
         }
     }//GEN-LAST:event_AccCreatePassConfirmKeyPressed
 
     private void AccCreateUsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreateUsernameKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_F1) {
-           JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password");
+            JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password");
         }
     }//GEN-LAST:event_AccCreateUsernameKeyPressed
 
     private void AccCreatePasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AccCreatePasswordKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_F1) {
-           JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password");
+            JOptionPane.showMessageDialog(rootPane, "• This is the Account creation screen.\n• Please enter you Username.\n• Please enter your password and confirm that password");
         }
     }//GEN-LAST:event_AccCreatePasswordKeyPressed
 
