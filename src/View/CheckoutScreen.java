@@ -1,17 +1,22 @@
-//Gerhard Kloppers
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
-
+/**
+ * @author Gerhard Kloppers
+ * @vesrion 1.15.0 8/6/2020
+ * @see java.lang.System
+ **/
 import Model.Books;
 import Model.Products;
 import Model.DigitalItems;
 import javax.swing.JOptionPane;
 
 public class CheckoutScreen extends javax.swing.JFrame {
+/**
+ * The CheckoutScreen is used to get the selected item from the MainScreen, and display the info for checkout.
+ * 
+ * @param args (parameters is data that is selected and passed trough to the CheckoutScreen. 
+ * @returns selected data as String.
+ * 
+**/
 
     Products OrderedProduct;
     Books OrderedBooks;
